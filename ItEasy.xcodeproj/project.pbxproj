@@ -17,9 +17,12 @@
 		EDBB01D427821BD10052A190 /* ItEasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D327821BD10052A190 /* ItEasyUITests.swift */; };
 		EDBB01D627821BD10052A190 /* ItEasyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */; };
 		EDBB01E427822E570052A190 /* CardSlider in Frameworks */ = {isa = PBXBuildFile; productRef = EDBB01E327822E570052A190 /* CardSlider */; };
-		EDBB01FF278244230052A190 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FC278244230052A190 /* OverlayView.swift */; };
+		EDBB01FF278244230052A190 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FC278244230052A190 /* RegisterView.swift */; };
 		EDBB0200278244230052A190 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FD278244230052A190 /* PresentationController.swift */; };
-		EDBB0201278244230052A190 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01FE278244230052A190 /* OverlayView.xib */; };
+		EDBB0201278244230052A190 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01FE278244230052A190 /* RegisterView.xib */; };
+		EDBB020427824B3E0052A190 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB020227824B3E0052A190 /* LoginView.xib */; };
+		EDBB020527824B3E0052A190 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020327824B3E0052A190 /* LoginView.swift */; };
+		EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020627824E780052A190 /* ActualGradientButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +56,12 @@
 		EDBB01CF27821BD10052A190 /* ItEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01D327821BD10052A190 /* ItEasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITests.swift; sourceTree = "<group>"; };
 		EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDBB01FC278244230052A190 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		EDBB01FC278244230052A190 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EDBB01FD278244230052A190 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		EDBB01FE278244230052A190 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		EDBB01FE278244230052A190 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		EDBB020227824B3E0052A190 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		EDBB020327824B3E0052A190 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EDBB020627824E780052A190 /* ActualGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +145,13 @@
 		EDBB01FB278244110052A190 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				EDBB020327824B3E0052A190 /* LoginView.swift */,
+				EDBB020227824B3E0052A190 /* LoginView.xib */,
 				EDBB01B627821BD00052A190 /* AuthController.swift */,
-				EDBB01FC278244230052A190 /* OverlayView.swift */,
-				EDBB01FE278244230052A190 /* OverlayView.xib */,
+				EDBB01FC278244230052A190 /* RegisterView.swift */,
+				EDBB01FE278244230052A190 /* RegisterView.xib */,
 				EDBB01FD278244230052A190 /* PresentationController.swift */,
+				EDBB020627824E780052A190 /* ActualGradientButton.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -258,8 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBB01BF27821BD00052A190 /* LaunchScreen.storyboard in Resources */,
-				EDBB0201278244230052A190 /* OverlayView.xib in Resources */,
+				EDBB0201278244230052A190 /* RegisterView.xib in Resources */,
 				EDBB01BC27821BD00052A190 /* Assets.xcassets in Resources */,
+				EDBB020427824B3E0052A190 /* LoginView.xib in Resources */,
 				EDBB01BA27821BD00052A190 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				EDBB01B727821BD00052A190 /* AuthController.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
+				EDBB020527824B3E0052A190 /* LoginView.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
-				EDBB01FF278244230052A190 /* OverlayView.swift in Sources */,
+				EDBB01FF278244230052A190 /* RegisterView.swift in Sources */,
 				EDBB0200278244230052A190 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

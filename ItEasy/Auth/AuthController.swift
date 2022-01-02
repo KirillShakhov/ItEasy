@@ -16,19 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoBlur: UIVisualEffectView!
     
     @IBAction func login(_ sender: UIButton) {
-        
+		let slideVC = LoginView()
+		slideVC.modalPresentationStyle = .custom
+		slideVC.transitioningDelegate = self
+		self.present(slideVC, animated: true, completion: nil)
     }
-    
-    @objc func showMiracle() {
-        let slideVC = OverlayView()
-        slideVC.modalPresentationStyle = .custom
-        slideVC.transitioningDelegate = self
-        self.present(slideVC, animated: true, completion: nil)
-    }
+
     
     
     @IBAction func register(_ sender: UIButton) {
-        showMiracle()
+		let slideVC = RegisterView()
+		slideVC.modalPresentationStyle = .custom
+		slideVC.transitioningDelegate = self
+		self.present(slideVC, animated: true, completion: nil)
     }
     
 
