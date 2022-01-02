@@ -43,6 +43,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLL-D1-XLw"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-8T-tUA">
                                 <rect key="frame" x="45" y="677" width="324" height="60"/>
@@ -62,6 +65,9 @@
                                                     </fragment>
                                                 </attributedString>
                                             </state>
+                                            <connections>
+                                                <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJC-F0-Uiq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -83,24 +89,13 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWX-tJ-pSx">
-                                <rect key="frame" x="50" y="224" width="314" height="128"/>
+                                <rect key="frame" x="50" y="224" width="314" height="120"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wFA-da-b99">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="120"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2B-dR-zj3">
-                                            <rect key="frame" x="0.0" y="0.0" width="74" height="0.0"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ukp-Nt-Xcr">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="0.0"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <vibrancyEffect>
-                                                <blurEffect style="regular"/>
-                                            </vibrancyEffect>
-                                        </visualEffectView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ItEasy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-AV-ZhY">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="120"/>
                                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="82"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -140,10 +135,13 @@
                             <constraint firstItem="hWX-tJ-pSx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="v4o-vQ-404"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoBlur" destination="hWX-tJ-pSx" id="whv-GL-b5A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="93.75"/>
         </scene>
     </scenes>
     <resources>

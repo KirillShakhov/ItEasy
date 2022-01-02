@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
 		EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B427821BD00052A190 /* SceneDelegate.swift */; };
-		EDBB01B727821BD00052A190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B627821BD00052A190 /* ViewController.swift */; };
+		EDBB01B727821BD00052A190 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B627821BD00052A190 /* AuthController.swift */; };
 		EDBB01BA27821BD00052A190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01B827821BD00052A190 /* Main.storyboard */; };
 		EDBB01BC27821BD00052A190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01BB27821BD00052A190 /* Assets.xcassets */; };
 		EDBB01BF27821BD00052A190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01BD27821BD00052A190 /* LaunchScreen.storyboard */; };
 		EDBB01CA27821BD10052A190 /* ItEasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01C927821BD10052A190 /* ItEasyTests.swift */; };
 		EDBB01D427821BD10052A190 /* ItEasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D327821BD10052A190 /* ItEasyUITests.swift */; };
 		EDBB01D627821BD10052A190 /* ItEasyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */; };
+		EDBB01E427822E570052A190 /* CardSlider in Frameworks */ = {isa = PBXBuildFile; productRef = EDBB01E327822E570052A190 /* CardSlider */; };
+		EDBB01FF278244230052A190 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FC278244230052A190 /* OverlayView.swift */; };
+		EDBB0200278244230052A190 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FD278244230052A190 /* PresentationController.swift */; };
+		EDBB0201278244230052A190 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01FE278244230052A190 /* OverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01B227821BD00052A190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBB01B427821BD00052A190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDBB01B627821BD00052A190 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDBB01B627821BD00052A190 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		EDBB01B927821BD00052A190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDBB01BB27821BD00052A190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBB01BE27821BD00052A190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,9 @@
 		EDBB01CF27821BD10052A190 /* ItEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01D327821BD10052A190 /* ItEasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITests.swift; sourceTree = "<group>"; };
 		EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDBB01FC278244230052A190 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		EDBB01FD278244230052A190 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		EDBB01FE278244230052A190 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBB01E427822E570052A190 /* CardSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +107,9 @@
 		EDBB01B127821BD00052A190 /* ItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				EDBB01FB278244110052A190 /* Auth */,
 				EDBB01B227821BD00052A190 /* AppDelegate.swift */,
 				EDBB01B427821BD00052A190 /* SceneDelegate.swift */,
-				EDBB01B627821BD00052A190 /* ViewController.swift */,
 				EDBB01B827821BD00052A190 /* Main.storyboard */,
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
 				EDBB01BD27821BD00052A190 /* LaunchScreen.storyboard */,
@@ -109,6 +117,7 @@
 			);
 			path = ItEasy;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		EDBB01C827821BD10052A190 /* ItEasyTests */ = {
 			isa = PBXGroup;
@@ -127,6 +136,17 @@
 			path = ItEasyUITests;
 			sourceTree = "<group>";
 		};
+		EDBB01FB278244110052A190 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EDBB01B627821BD00052A190 /* AuthController.swift */,
+				EDBB01FC278244230052A190 /* OverlayView.swift */,
+				EDBB01FE278244230052A190 /* OverlayView.xib */,
+				EDBB01FD278244230052A190 /* PresentationController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,9 @@
 			dependencies = (
 			);
 			name = ItEasy;
+			packageProductDependencies = (
+				EDBB01E327822E570052A190 /* CardSlider */,
+			);
 			productName = ItEasy;
 			productReference = EDBB01AF27821BD00052A190 /* ItEasy.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +238,9 @@
 				Base,
 			);
 			mainGroup = EDBB01A627821BD00052A190;
+			packageReferences = (
+				EDBB01E227822E570052A190 /* XCRemoteSwiftPackageReference "cardslider" */,
+			);
 			productRefGroup = EDBB01B027821BD00052A190 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBB01BF27821BD00052A190 /* LaunchScreen.storyboard in Resources */,
+				EDBB0201278244230052A190 /* OverlayView.xib in Resources */,
 				EDBB01BC27821BD00052A190 /* Assets.xcassets in Resources */,
 				EDBB01BA27821BD00052A190 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBB01B727821BD00052A190 /* ViewController.swift in Sources */,
+				EDBB01B727821BD00052A190 /* AuthController.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
+				EDBB01FF278244230052A190 /* OverlayView.swift in Sources */,
+				EDBB0200278244230052A190 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +637,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDBB01E227822E570052A190 /* XCRemoteSwiftPackageReference "cardslider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ramotion/cardslider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDBB01E327822E570052A190 /* CardSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDBB01E227822E570052A190 /* XCRemoteSwiftPackageReference "cardslider" */;
+			productName = CardSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDBB01A727821BD00052A190 /* Project object */;
 }
