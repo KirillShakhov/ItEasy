@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIViewController {
+class LoginViewController: UIViewController {
     
     var hasSetPointOrigin = false
     @IBOutlet weak var loginButton: UIButton!
@@ -40,6 +40,10 @@ class LoginView: UIViewController {
 	
 		 let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 		view.addGestureRecognizer(tap)
+
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 	
 	//Calls this function when the tap is recognized.
@@ -80,5 +84,14 @@ class LoginView: UIViewController {
                 }
             }
         }
+		dismissKeyboard()
     }
+	
+	@objc func keyboardWillShow(notification: NSNotification) {
+		self.view.frame.origin.y = 100
+	}
+
+	@objc func keyboardWillHide(notification: NSNotification) {
+		self.view.frame.origin.y = (self.pointOrigin ?? CGPoint(x: 0, y: 700)).y
+	}
 }

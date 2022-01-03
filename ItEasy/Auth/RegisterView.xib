@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterView" customModule="ItEasy" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="ItEasy" customModuleProvider="target">
             <connections>
                 <outlet property="registerButton" destination="1nH-kD-om9" id="Psu-K5-0VX"/>
                 <outlet property="slideIdicator" destination="h5u-lC-Vtp" id="dp4-sa-hOB"/>
@@ -71,7 +71,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-kD-om9" customClass="ActualGradientButton" customModule="ItEasy" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-kD-om9" customClass="ActualGradientButton">
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
@@ -101,6 +101,9 @@
                             <color key="value" red="0.60392159219999997" green="0.76470589639999997" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="register:" destination="-1" eventType="touchUpInside" id="Wie-ms-Rfl"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
                     <rect key="frame" x="45" y="250" width="324" height="34"/>
@@ -145,11 +148,6 @@
             <point key="canvasLocation" x="131.8840579710145" y="219.30803571428569"/>
         </view>
     </objects>
-    <designables>
-        <designable name="1nH-kD-om9">
-            <size key="intrinsicContentSize" width="75" height="35"/>
-        </designable>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

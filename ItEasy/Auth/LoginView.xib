@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
                 <outlet property="loginButton" destination="1nH-kD-om9" id="MqU-Ef-5Gh"/>
                 <outlet property="slideIdicator" destination="h5u-lC-Vtp" id="dp4-sa-hOB"/>
@@ -49,7 +49,7 @@
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-kD-om9" customClass="ActualGradientButton" customModule="ItEasy" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-kD-om9" customClass="ActualGradientButton" customModule="ItEasy" customModuleProvider="target">
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>

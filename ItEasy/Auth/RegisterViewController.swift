@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterView: UIViewController {
+class RegisterViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var registerButton: UIButton!
@@ -30,13 +30,19 @@ class RegisterView: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 	
 	}
-    
+	
+	@IBAction func register(_ sender: UIButton) {
+//		.goToNextPage()
+	}
+
+	
     override func viewDidLayoutSubviews() {
         if !hasSetPointOrigin {
             hasSetPointOrigin = true
             pointOrigin = self.view.frame.origin
         }
     }
+    
 	//Calls this function when the tap is recognized.
 	@objc func dismissKeyboard() {
 		//Causes the view (or one of its embedded text fields) to resign the first responder status.

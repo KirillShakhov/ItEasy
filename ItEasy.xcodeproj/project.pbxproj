@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED12345A2782882400ABF16E /* SlideWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1234592782882400ABF16E /* SlideWindow.swift */; };
+		ED12345E2782909000ABF16E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED12345D2782909000ABF16E /* Launch Screen.storyboard */; };
+		ED152A1D278296A2008D73AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED152A1C278296A2008D73AC /* Main.storyboard */; };
+		ED152A1F27829702008D73AC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED152A1E27829702008D73AC /* MainController.swift */; };
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
 		EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B427821BD00052A190 /* SceneDelegate.swift */; };
 		EDBB01B727821BD00052A190 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B627821BD00052A190 /* AuthController.swift */; };
-		EDBB01BA27821BD00052A190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01B827821BD00052A190 /* Main.storyboard */; };
+		EDBB01BA27821BD00052A190 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01B827821BD00052A190 /* Auth.storyboard */; };
 		EDBB01BC27821BD00052A190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01BB27821BD00052A190 /* Assets.xcassets */; };
-		EDBB01BF27821BD00052A190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01BD27821BD00052A190 /* LaunchScreen.storyboard */; };
 		EDBB01CA27821BD10052A190 /* ItEasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01C927821BD10052A190 /* ItEasyTests.swift */; };
 		EDBB01D427821BD10052A190 /* ItEasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D327821BD10052A190 /* ItEasyUITests.swift */; };
 		EDBB01D627821BD10052A190 /* ItEasyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */; };
 		EDBB01E427822E570052A190 /* CardSlider in Frameworks */ = {isa = PBXBuildFile; productRef = EDBB01E327822E570052A190 /* CardSlider */; };
-		EDBB01FF278244230052A190 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FC278244230052A190 /* RegisterView.swift */; };
+		EDBB01FF278244230052A190 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FC278244230052A190 /* RegisterViewController.swift */; };
 		EDBB0200278244230052A190 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01FD278244230052A190 /* PresentationController.swift */; };
 		EDBB0201278244230052A190 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB01FE278244230052A190 /* RegisterView.xib */; };
 		EDBB020427824B3E0052A190 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB020227824B3E0052A190 /* LoginView.xib */; };
-		EDBB020527824B3E0052A190 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020327824B3E0052A190 /* LoginView.swift */; };
+		EDBB020527824B3E0052A190 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020327824B3E0052A190 /* LoginViewController.swift */; };
 		EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020627824E780052A190 /* ActualGradientButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,24 +46,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1234592782882400ABF16E /* SlideWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideWindow.swift; path = ItEasy/auth/SlideWindow.swift; sourceTree = SOURCE_ROOT; };
+		ED12345D2782909000ABF16E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		ED152A1C278296A2008D73AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ED152A1E27829702008D73AC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01B227821BD00052A190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBB01B427821BD00052A190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDBB01B627821BD00052A190 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
-		EDBB01B927821BD00052A190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDBB01B927821BD00052A190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		EDBB01BB27821BD00052A190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EDBB01BE27821BD00052A190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDBB01C027821BD00052A190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBB01C527821BD10052A190 /* ItEasyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItEasyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01C927821BD10052A190 /* ItEasyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyTests.swift; sourceTree = "<group>"; };
 		EDBB01CF27821BD10052A190 /* ItEasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItEasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01D327821BD10052A190 /* ItEasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITests.swift; sourceTree = "<group>"; };
 		EDBB01D527821BD10052A190 /* ItEasyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItEasyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EDBB01FC278244230052A190 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EDBB01FC278244230052A190 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EDBB01FD278244230052A190 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		EDBB01FE278244230052A190 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		EDBB020227824B3E0052A190 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
-		EDBB020327824B3E0052A190 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EDBB020327824B3E0052A190 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDBB020627824E780052A190 /* ActualGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGradientButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +122,11 @@
 				EDBB01FB278244110052A190 /* Auth */,
 				EDBB01B227821BD00052A190 /* AppDelegate.swift */,
 				EDBB01B427821BD00052A190 /* SceneDelegate.swift */,
-				EDBB01B827821BD00052A190 /* Main.storyboard */,
+				ED12345D2782909000ABF16E /* Launch Screen.storyboard */,
+				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
-				EDBB01BD27821BD00052A190 /* LaunchScreen.storyboard */,
 				EDBB01C027821BD00052A190 /* Info.plist */,
+				ED152A1E27829702008D73AC /* MainController.swift */,
 			);
 			path = ItEasy;
 			sourceTree = "<group>";
@@ -145,13 +152,15 @@
 		EDBB01FB278244110052A190 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				EDBB020327824B3E0052A190 /* LoginView.swift */,
+				EDBB01B827821BD00052A190 /* Auth.storyboard */,
+				EDBB020327824B3E0052A190 /* LoginViewController.swift */,
 				EDBB020227824B3E0052A190 /* LoginView.xib */,
 				EDBB01B627821BD00052A190 /* AuthController.swift */,
-				EDBB01FC278244230052A190 /* RegisterView.swift */,
+				EDBB01FC278244230052A190 /* RegisterViewController.swift */,
 				EDBB01FE278244230052A190 /* RegisterView.xib */,
 				EDBB01FD278244230052A190 /* PresentationController.swift */,
 				EDBB020627824E780052A190 /* ActualGradientButton.swift */,
+				ED1234592782882400ABF16E /* SlideWindow.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -266,11 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBB01BF27821BD00052A190 /* LaunchScreen.storyboard in Resources */,
+				ED12345E2782909000ABF16E /* Launch Screen.storyboard in Resources */,
 				EDBB0201278244230052A190 /* RegisterView.xib in Resources */,
 				EDBB01BC27821BD00052A190 /* Assets.xcassets in Resources */,
+				ED152A1D278296A2008D73AC /* Main.storyboard in Resources */,
 				EDBB020427824B3E0052A190 /* LoginView.xib in Resources */,
-				EDBB01BA27821BD00052A190 /* Main.storyboard in Resources */,
+				EDBB01BA27821BD00052A190 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +308,11 @@
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				EDBB01B727821BD00052A190 /* AuthController.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
-				EDBB020527824B3E0052A190 /* LoginView.swift in Sources */,
+				EDBB020527824B3E0052A190 /* LoginViewController.swift in Sources */,
+				ED152A1F27829702008D73AC /* MainController.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
-				EDBB01FF278244230052A190 /* RegisterView.swift in Sources */,
+				ED12345A2782882400ABF16E /* SlideWindow.swift in Sources */,
+				EDBB01FF278244230052A190 /* RegisterViewController.swift in Sources */,
 				EDBB0200278244230052A190 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,20 +350,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EDBB01B827821BD00052A190 /* Main.storyboard */ = {
+		EDBB01B827821BD00052A190 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EDBB01B927821BD00052A190 /* Base */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EDBB01BD27821BD00052A190 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDBB01BE27821BD00052A190 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,8 +488,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ItEasy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -514,8 +518,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ItEasy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

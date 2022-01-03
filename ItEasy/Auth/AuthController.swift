@@ -11,12 +11,12 @@ import CardSlider
 
 
 
-class ViewController: UIViewController {
+class AuthController: UIViewController {
     
     @IBOutlet weak var logoBlur: UIVisualEffectView!
     
     @IBAction func login(_ sender: UIButton) {
-		let slideVC = LoginView()
+		let slideVC = LoginViewController()
 		slideVC.modalPresentationStyle = .custom
 		slideVC.transitioningDelegate = self
 		self.present(slideVC, animated: true, completion: nil)
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func register(_ sender: UIButton) {
-		let slideVC = RegisterView()
+		let slideVC = RegisterViewController()
 		slideVC.modalPresentationStyle = .custom
 		slideVC.transitioningDelegate = self
 		self.present(slideVC, animated: true, completion: nil)
@@ -36,12 +36,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
     
+//	func goToNextPage(){
+//		let storyboard = UIStoryboard(name: "StoryboardName", bundle: nil)
+//		let vc = storyboard.instantiateViewController(withIdentifier: "ViewControllerID") as UIViewController
+//		present(vc, animated: true, completion: nil)
+//	}
 }
 
-extension ViewController: UIViewControllerTransitioningDelegate {
+extension AuthController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         PresentationController(presentedViewController: presented, presenting: presenting)
     }
