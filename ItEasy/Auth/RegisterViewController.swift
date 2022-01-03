@@ -32,7 +32,14 @@ class RegisterViewController: UIViewController {
 	}
 	
 	@IBAction func register(_ sender: UIButton) {
-//		.goToNextPage()
+//		let slideVC = MainController()
+//		self.present(slideVC, animated: true, completion: nil)
+
+
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+		vc.modalPresentationStyle = .fullScreen
+		present(vc, animated: true, completion: nil)
 	}
 
 	

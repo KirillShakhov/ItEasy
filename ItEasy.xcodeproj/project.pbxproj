@@ -10,7 +10,7 @@
 		ED12345A2782882400ABF16E /* SlideWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1234592782882400ABF16E /* SlideWindow.swift */; };
 		ED12345E2782909000ABF16E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED12345D2782909000ABF16E /* Launch Screen.storyboard */; };
 		ED152A1D278296A2008D73AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED152A1C278296A2008D73AC /* Main.storyboard */; };
-		ED152A1F27829702008D73AC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED152A1E27829702008D73AC /* MainController.swift */; };
+		ED152A1F27829702008D73AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED152A1E27829702008D73AC /* MainViewController.swift */; };
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
 		EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B427821BD00052A190 /* SceneDelegate.swift */; };
 		EDBB01B727821BD00052A190 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B627821BD00052A190 /* AuthController.swift */; };
@@ -49,7 +49,7 @@
 		ED1234592782882400ABF16E /* SlideWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlideWindow.swift; path = ItEasy/auth/SlideWindow.swift; sourceTree = SOURCE_ROOT; };
 		ED12345D2782909000ABF16E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		ED152A1C278296A2008D73AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		ED152A1E27829702008D73AC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		ED152A1E27829702008D73AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01B227821BD00052A190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBB01B427821BD00052A190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
 				EDBB01C027821BD00052A190 /* Info.plist */,
-				ED152A1E27829702008D73AC /* MainController.swift */,
 			);
 			path = ItEasy;
 			sourceTree = "<group>";
@@ -152,10 +151,11 @@
 		EDBB01FB278244110052A190 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				ED152A1E27829702008D73AC /* MainViewController.swift */,
+				EDBB01B627821BD00052A190 /* AuthController.swift */,
 				EDBB01B827821BD00052A190 /* Auth.storyboard */,
 				EDBB020327824B3E0052A190 /* LoginViewController.swift */,
 				EDBB020227824B3E0052A190 /* LoginView.xib */,
-				EDBB01B627821BD00052A190 /* AuthController.swift */,
 				EDBB01FC278244230052A190 /* RegisterViewController.swift */,
 				EDBB01FE278244230052A190 /* RegisterView.xib */,
 				EDBB01FD278244230052A190 /* PresentationController.swift */,
@@ -309,7 +309,7 @@
 				EDBB01B727821BD00052A190 /* AuthController.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
 				EDBB020527824B3E0052A190 /* LoginViewController.swift in Sources */,
-				ED152A1F27829702008D73AC /* MainController.swift in Sources */,
+				ED152A1F27829702008D73AC /* MainViewController.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
 				ED12345A2782882400ABF16E /* SlideWindow.swift in Sources */,
 				EDBB01FF278244230052A190 /* RegisterViewController.swift in Sources */,

@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
            updateView()
         }
      }
+    
      @IBInspectable var secondColor: UIColor = UIColor.clear {
         didSet {
             updateView()

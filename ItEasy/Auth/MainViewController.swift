@@ -8,7 +8,7 @@
 import UIKit
 
 
-class MainController: UIViewController {
+class MainViewController: UIViewController {
 	
 	
 	
