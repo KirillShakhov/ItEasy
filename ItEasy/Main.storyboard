@@ -230,6 +230,7 @@
                 <tabBarController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="0ah-q3-94P" customClass="ModelViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Ujd-gC-OZx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.59418114600000005" green="0.77053789350000002" blue="0.64337205320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
