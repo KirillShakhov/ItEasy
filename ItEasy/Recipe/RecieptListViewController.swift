@@ -8,7 +8,8 @@
 import UIKit
 
 class RecieptViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    @IBOutlet weak var recipeList: UICollectionView!
+    
     let locationNames = ["Olive", "Оливье", "Оливье", "Оливье", "Оливье"]
        
 	let locationImages = [UIImage(named: "olive"), UIImage(named: "olive"), UIImage(named: "olive"), UIImage(named: "olive"), UIImage(named: "olive")]
@@ -16,7 +17,15 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+				
+	
+	
+		self.recipeList.register(UINib(nibName: "RecieptCell", bundle: nil), forCellWithReuseIdentifier: "RecieptCell")
 
+		self.recipeList.dataSource = self
+		self.recipeList.delegate = self
+		
+		
         // Do any additional setup after loading the view.
     }
     
@@ -29,10 +38,10 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as! RecieptCard
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecieptCell", for: indexPath) as! RecieptCell
         
-		cell.locationImage.image = locationImages[indexPath.row]
-		cell.locationName.text = locationNames[indexPath.row]
+		cell.image.image = locationImages[indexPath.row]
+		cell.title.text = locationNames[indexPath.row]
 
         
         //This creates the shadows and modifies the cards a little bit
@@ -53,7 +62,3 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 }
 
-class RecieptCard: UICollectionViewCell {
-	@IBOutlet weak var locationImage: UIImageView!
-	@IBOutlet weak var locationName: UILabel!
-}

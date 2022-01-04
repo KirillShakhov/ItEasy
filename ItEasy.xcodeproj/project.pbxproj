@@ -12,7 +12,7 @@
 		ED152A1D278296A2008D73AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED152A1C278296A2008D73AC /* Main.storyboard */; };
 		ED152A1F27829702008D73AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED152A1E27829702008D73AC /* MainViewController.swift */; };
 		EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5754B2783B8B800942E60 /* FilterViewController.swift */; };
-		EDA575522783CF0400942E60 /* RecieptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA575512783CF0400942E60 /* RecieptViewController.swift */; };
+		EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA575512783CF0400942E60 /* RecieptListViewController.swift */; };
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
 		EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B427821BD00052A190 /* SceneDelegate.swift */; };
 		EDBB01B727821BD00052A190 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B627821BD00052A190 /* AuthController.swift */; };
@@ -28,6 +28,9 @@
 		EDBB020427824B3E0052A190 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBB020227824B3E0052A190 /* LoginView.xib */; };
 		EDBB020527824B3E0052A190 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020327824B3E0052A190 /* LoginViewController.swift */; };
 		EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB020627824E780052A190 /* ActualGradientButton.swift */; };
+		EDF8D0B72783E1B6009887D0 /* RecipeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8D0B62783E1B6009887D0 /* RecipeCardViewController.swift */; };
+		EDF8D0BD2783E74B009887D0 /* RecieptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF8D0BB2783E74B009887D0 /* RecieptCell.swift */; };
+		EDF8D0BE2783E74B009887D0 /* RecieptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF8D0BC2783E74B009887D0 /* RecieptCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +56,7 @@
 		ED152A1C278296A2008D73AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED152A1E27829702008D73AC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EDA5754B2783B8B800942E60 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		EDA575512783CF0400942E60 /* RecieptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptViewController.swift; sourceTree = "<group>"; };
+		EDA575512783CF0400942E60 /* RecieptListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptListViewController.swift; sourceTree = "<group>"; };
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBB01B227821BD00052A190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBB01B427821BD00052A190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		EDBB020227824B3E0052A190 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		EDBB020327824B3E0052A190 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDBB020627824E780052A190 /* ActualGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGradientButton.swift; sourceTree = "<group>"; };
+		EDF8D0B62783E1B6009887D0 /* RecipeCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardViewController.swift; sourceTree = "<group>"; };
+		EDF8D0BB2783E74B009887D0 /* RecieptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptCell.swift; sourceTree = "<group>"; };
+		EDF8D0BC2783E74B009887D0 /* RecieptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecieptCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		EDBB01B127821BD00052A190 /* ItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				EDF8D0BA2783E2EF009887D0 /* Recipe */,
 				EDBB01FB278244110052A190 /* Auth */,
 				EDBB01B227821BD00052A190 /* AppDelegate.swift */,
 				EDBB01B427821BD00052A190 /* SceneDelegate.swift */,
@@ -131,7 +138,6 @@
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
 				EDBB01C027821BD00052A190 /* Info.plist */,
 				EDA5754B2783B8B800942E60 /* FilterViewController.swift */,
-				EDA575512783CF0400942E60 /* RecieptViewController.swift */,
 			);
 			path = ItEasy;
 			sourceTree = "<group>";
@@ -169,6 +175,17 @@
 				ED1234592782882400ABF16E /* SlideWindow.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		EDF8D0BA2783E2EF009887D0 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				EDF8D0B62783E1B6009887D0 /* RecipeCardViewController.swift */,
+				EDA575512783CF0400942E60 /* RecieptListViewController.swift */,
+				EDF8D0BB2783E74B009887D0 /* RecieptCell.swift */,
+				EDF8D0BC2783E74B009887D0 /* RecieptCell.xib */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +304,7 @@
 				ED152A1D278296A2008D73AC /* Main.storyboard in Resources */,
 				EDBB020427824B3E0052A190 /* LoginView.xib in Resources */,
 				EDBB01BA27821BD00052A190 /* Auth.storyboard in Resources */,
+				EDF8D0BE2783E74B009887D0 /* RecieptCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
-				EDA575522783CF0400942E60 /* RecieptViewController.swift in Sources */,
+				EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */,
+				EDF8D0B72783E1B6009887D0 /* RecipeCardViewController.swift in Sources */,
 				EDBB01B727821BD00052A190 /* AuthController.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
 				EDBB020527824B3E0052A190 /* LoginViewController.swift in Sources */,
 				EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */,
+				EDF8D0BD2783E74B009887D0 /* RecieptCell.swift in Sources */,
 				ED152A1F27829702008D73AC /* MainViewController.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
 				ED12345A2782882400ABF16E /* SlideWindow.swift in Sources */,
