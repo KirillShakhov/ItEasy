@@ -41,13 +41,10 @@
                                     <action selector="closeCard:" destination="Kz2-T6-Rlg" eventType="touchUpInside" id="kca-Ao-vps"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olivier Salad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-gs-RkK">
-                                <rect key="frame" x="75" y="140" width="265" height="73"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="olive" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-qB-J1O">
+                                <rect key="frame" x="0.0" y="132" width="414" height="356"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4uN-lW-QaL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,7 +58,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="C7A-bC-dOY"/>
                     <connections>
-                        <outlet property="cardTitle" destination="Zrr-gs-RkK" id="j3M-nv-tb2"/>
+                        <outlet property="cardImage" destination="CWs-qB-J1O" id="bSb-ge-bW0"/>
+                        <outlet property="cardTitle" destination="H8R-0S-BqX" id="GfZ-Mn-1fU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEI-32-aW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,6 +69,7 @@
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="olive" width="870" height="480"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

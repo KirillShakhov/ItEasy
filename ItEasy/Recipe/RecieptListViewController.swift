@@ -69,7 +69,8 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
 		
 		guard let vc = storyboard.instantiateViewController(identifier: "RecipeCard") as? RecipeCard else { return }
 		vc.itemName = locationNames[indexPath.item]
-		
+		vc.itemImage = locationImages[indexPath.item]
+
 //		let vc = storyboard.instantiateViewController(withIdentifier: "RecipeCard")
 		vc.modalPresentationStyle = .fullScreen
 		
