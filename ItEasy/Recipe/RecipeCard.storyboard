@@ -41,6 +41,13 @@
                                     <action selector="closeCard:" destination="Kz2-T6-Rlg" eventType="touchUpInside" id="kca-Ao-vps"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olivier Salad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-gs-RkK">
+                                <rect key="frame" x="75" y="140" width="265" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4uN-lW-QaL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,10 +60,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C7A-bC-dOY"/>
+                    <connections>
+                        <outlet property="cardTitle" destination="Zrr-gs-RkK" id="j3M-nv-tb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEI-32-aW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3064" y="1473"/>
+            <point key="canvasLocation" x="3063.768115942029" y="1472.5446428571429"/>
         </scene>
     </scenes>
     <resources>

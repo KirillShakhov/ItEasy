@@ -66,15 +66,15 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
         print(id)
         
 		let storyboard = UIStoryboard(name: "RecipeCard", bundle: nil)
-		let vc = storyboard.instantiateViewController(withIdentifier: "RecipeCard")
+		
+		guard let vc = storyboard.instantiateViewController(identifier: "RecipeCard") as? RecipeCard else { return }
+		vc.itemName = locationNames[indexPath.item]
+		
+//		let vc = storyboard.instantiateViewController(withIdentifier: "RecipeCard")
 		vc.modalPresentationStyle = .fullScreen
 		
 //		self.navigationController?.pushViewController(vc, animated: true)
-		
 		present(vc, animated:true)
-
 		
-//		let slideVC = RecipeCardViewController()
-//		slideVC.modalPresentationStyle = .pageSheet
 	}
 }

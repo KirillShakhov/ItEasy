@@ -9,10 +9,13 @@ import UIKit
 
 class RecipeCard: UIViewController {
 	
+    @IBOutlet var cardTitle: UILabel!
+    var itemName: String?
+
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        cardTitle.text = itemName
     }
 	
 	
@@ -20,5 +23,4 @@ class RecipeCard: UIViewController {
 		self.dismiss(animated: true, completion: nil)
 	}
 
-	
 }
