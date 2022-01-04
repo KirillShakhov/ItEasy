@@ -25,6 +25,8 @@ class ActualGradientButton: UIButton {
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		gradientLayer.frame = bounds
+		layer.cornerRadius = 15
+		layer.masksToBounds = true
 	}
 
 	private lazy var gradientLayer: CAGradientLayer = {

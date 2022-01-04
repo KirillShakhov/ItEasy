@@ -217,9 +217,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-ii-hyf">
-                                <rect key="frame" x="0.0" y="243" width="414" height="570"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-ii-hyf">
+                                <rect key="frame" x="0.0" y="234" width="414" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q4d-un-mta">
                                     <size key="itemSize" width="414" height="170"/>
@@ -354,6 +353,8 @@
                         <constraints>
                             <constraint firstItem="Jgd-gF-g1T" firstAttribute="trailing" secondItem="ije-XC-NOd" secondAttribute="trailing" constant="20" id="3VR-eX-n0B"/>
                             <constraint firstItem="uLt-9d-yN6" firstAttribute="top" secondItem="Hof-Za-KhZ" secondAttribute="bottom" constant="20" id="8Mo-JG-1zF"/>
+                            <constraint firstItem="Cp8-ii-hyf" firstAttribute="trailing" secondItem="Jgd-gF-g1T" secondAttribute="trailing" id="9Od-m4-e0k"/>
+                            <constraint firstItem="Cp8-ii-hyf" firstAttribute="top" secondItem="ibF-6X-NU1" secondAttribute="bottom" constant="20" id="GJP-1p-f9Y"/>
                             <constraint firstItem="ibF-6X-NU1" firstAttribute="leading" secondItem="uLt-9d-yN6" secondAttribute="trailing" constant="10" id="Shf-IQ-f2u"/>
                             <constraint firstItem="ije-XC-NOd" firstAttribute="top" secondItem="Hof-Za-KhZ" secondAttribute="bottom" constant="20" id="TaC-ba-7gL"/>
                             <constraint firstItem="Jgd-gF-g1T" firstAttribute="trailing" secondItem="Hof-Za-KhZ" secondAttribute="trailing" constant="20" id="VQy-cH-gIh"/>
@@ -361,7 +362,9 @@
                             <constraint firstItem="Hof-Za-KhZ" firstAttribute="top" secondItem="Jgd-gF-g1T" secondAttribute="top" constant="45" id="Vzq-ky-t5I"/>
                             <constraint firstItem="Hof-Za-KhZ" firstAttribute="leading" secondItem="Jgd-gF-g1T" secondAttribute="leading" constant="20" id="asW-Fr-lH6"/>
                             <constraint firstItem="uLt-9d-yN6" firstAttribute="leading" secondItem="Jgd-gF-g1T" secondAttribute="leading" constant="20" id="faq-R0-S03"/>
+                            <constraint firstItem="Cp8-ii-hyf" firstAttribute="leading" secondItem="Jgd-gF-g1T" secondAttribute="leading" id="fqC-MM-0Zf"/>
                             <constraint firstItem="ije-XC-NOd" firstAttribute="leading" secondItem="ibF-6X-NU1" secondAttribute="trailing" constant="10" id="pGQ-kr-Qay"/>
+                            <constraint firstItem="Cp8-ii-hyf" firstAttribute="bottom" secondItem="Jgd-gF-g1T" secondAttribute="bottom" id="row-hT-fyH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Receipts" image="Save" id="KG7-tL-i43"/>

@@ -7,64 +7,72 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class LoginViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var registerButton: UIButton!
-	@IBOutlet weak var slideIdicator: UIView!
-
     var hasSetPointOrigin = false
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBInspectable var firstColor: UIColor = UIColor.clear {
+       didSet {
+           updateView()
+        }
+     }
+    
+     @IBInspectable var secondColor: UIColor = UIColor.clear {
+        didSet {
+            updateView()
+        }
+     }
+         
+     
+         
     var pointOrigin: CGPoint?
+    
+    @IBOutlet weak var slideIdicator: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
+        
         slideIdicator.roundCorners(.allCorners, radius: 10)
 		
-		let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-	   view.addGestureRecognizer(tap)
 		
+	
+		 let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+		view.addGestureRecognizer(tap)
+
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
 	
+	//Calls this function when the tap is recognized.
+	@objc func dismissKeyboard() {
+		//Causes the view (or one of its embedded text fields) to resign the first responder status.
+		view.endEditing(true)
 	}
-	
     
-    @IBAction func register(_ sender: UIButton) {
-//		let slideVC = MainController()
-//		self.present(slideVC, animated: true, completion: nil)
+    func updateView() {
+        let layer = loginButton.layer as! CAGradientLayer
 
-
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
-		vc.modalPresentationStyle = .fullScreen
-		present(vc, animated: true, completion: nil)
-	}
-
-	
+        layer.colors = [firstColor, secondColor].map{$0.cgColor}
+     }
+    
     override func viewDidLayoutSubviews() {
         if !hasSetPointOrigin {
             hasSetPointOrigin = true
             pointOrigin = self.view.frame.origin
         }
     }
-    
-	//Calls this function when the tap is recognized.
-	@objc func dismissKeyboard() {
-		//Causes the view (or one of its embedded text fields) to resign the first responder status.
-		view.endEditing(true)
-	}
-	
     @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
-		let windowTranslation = sender.translation(in: view)
+        let translation = sender.translation(in: view)
         
         // Not allowing the user to drag the view upward
-        guard windowTranslation.y >= 0 else { return }
+        guard translation.y >= 0 else { return }
         
         // setting x as 0 because we don't want users to move the frame side ways!! Only want straight up or down
-        view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y + windowTranslation.y)
+        view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y + translation.y)
         
         if sender.state == .ended {
             let dragVelocity = sender.velocity(in: view)
@@ -80,16 +88,11 @@ class RegisterViewController: UIViewController {
 		dismissKeyboard()
     }
 	
-	
-	
 	@objc func keyboardWillShow(notification: NSNotification) {
-		  // move the root view up by the distance of keyboard height
-		  self.view.frame.origin.y = 100
-	  }
+		self.view.frame.origin.y = 100
+	}
 
 	@objc func keyboardWillHide(notification: NSNotification) {
-
-	  // move back the root view origin to zero
-		self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 700)
+		self.view.frame.origin.y = (self.pointOrigin ?? CGPoint(x: 0, y: 700)).y
 	}
 }
