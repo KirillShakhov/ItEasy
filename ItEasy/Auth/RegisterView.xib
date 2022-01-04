@@ -50,24 +50,30 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-W6-WSY">
-                    <rect key="frame" x="45" y="304" width="324" height="23"/>
+                    <rect key="frame" x="45" y="315" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="anung@jagatara.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Xc-ats">
-                    <rect key="frame" x="45" y="347" width="324" height="34"/>
+                    <rect key="frame" x="45" y="358" width="324" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="OnY-ea-LLa"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="825-kE-A94">
-                    <rect key="frame" x="45" y="401" width="324" height="23"/>
+                    <rect key="frame" x="45" y="423" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CSd-SI-1gk">
-                    <rect key="frame" x="45" y="444" width="324" height="34"/>
+                    <rect key="frame" x="45" y="466" width="324" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="uVF-Uv-TAv"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                 </textField>
@@ -95,10 +101,10 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                            <color key="value" red="0.496025775" green="0.64324938340000004" blue="0.53709062200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="value" red="0.60392159219999997" green="0.76470589639999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                            <color key="value" red="0.60392159219999997" green="0.76470589639999997" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="value" red="0.47843140360000003" green="0.61568629740000003" blue="0.50588238240000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -106,7 +112,10 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
-                    <rect key="frame" x="45" y="250" width="324" height="34"/>
+                    <rect key="frame" x="45" y="250" width="324" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PWh-05-aqc"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                 </textField>
