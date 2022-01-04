@@ -17,7 +17,6 @@
 		ED5868602784F17F0092C0B5 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5868562784F17F0092C0B5 /* PresentationController.swift */; };
 		ED5868612784F17F0092C0B5 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED5868572784F17F0092C0B5 /* LoginView.xib */; };
 		ED5868622784F17F0092C0B5 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED5868582784F17F0092C0B5 /* RegisterView.xib */; };
-		ED5868632784F17F0092C0B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5868592784F17F0092C0B5 /* MainViewController.swift */; };
 		ED5868642784F17F0092C0B5 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED58685A2784F17F0092C0B5 /* Auth.storyboard */; };
 		ED5868652784F17F0092C0B5 /* SlideWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685C2784F17F0092C0B5 /* SlideWindow.swift */; };
 		ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685D2784F17F0092C0B5 /* LoginViewController.swift */; };
@@ -67,7 +66,6 @@
 		ED5868562784F17F0092C0B5 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		ED5868572784F17F0092C0B5 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		ED5868582784F17F0092C0B5 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
-		ED5868592784F17F0092C0B5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED58685B2784F17F0092C0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		ED58685C2784F17F0092C0B5 /* SlideWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideWindow.swift; sourceTree = "<group>"; };
 		ED58685D2784F17F0092C0B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -121,17 +119,24 @@
 		ED5868552784F17F0092C0B5 /* auth */ = {
 			isa = PBXGroup;
 			children = (
-				ED5868562784F17F0092C0B5 /* PresentationController.swift */,
 				ED5868572784F17F0092C0B5 /* LoginView.xib */,
-				ED5868582784F17F0092C0B5 /* RegisterView.xib */,
-				ED5868592784F17F0092C0B5 /* MainViewController.swift */,
-				ED58685A2784F17F0092C0B5 /* Auth.storyboard */,
-				ED58685C2784F17F0092C0B5 /* SlideWindow.swift */,
 				ED58685D2784F17F0092C0B5 /* LoginViewController.swift */,
-				ED58685E2784F17F0092C0B5 /* AuthController.swift */,
+				ED5868582784F17F0092C0B5 /* RegisterView.xib */,
 				ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */,
+				ED58685A2784F17F0092C0B5 /* Auth.storyboard */,
+				ED58685E2784F17F0092C0B5 /* AuthController.swift */,
+				ED58685C2784F17F0092C0B5 /* SlideWindow.swift */,
 			);
 			path = auth;
+			sourceTree = "<group>";
+		};
+		ED8EC181278501FD00420527 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				ED152A1C278296A2008D73AC /* Main.storyboard */,
+				EDA575512783CF0400942E60 /* RecieptListViewController.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		EDBB01A627821BD00052A190 = {
@@ -157,13 +162,13 @@
 		EDBB01B127821BD00052A190 /* ItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				ED8EC181278501FD00420527 /* main */,
 				EDF8D0C32784A9E1009887D0 /* util */,
 				EDF8D0BA2783E2EF009887D0 /* recipe */,
 				ED5868552784F17F0092C0B5 /* auth */,
 				EDBB01B227821BD00052A190 /* AppDelegate.swift */,
 				EDBB01B427821BD00052A190 /* SceneDelegate.swift */,
 				ED12345D2782909000ABF16E /* Launch Screen.storyboard */,
-				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
 				EDBB01C027821BD00052A190 /* Info.plist */,
 				EDA5754B2783B8B800942E60 /* FilterViewController.swift */,
@@ -194,7 +199,6 @@
 			children = (
 				EDF8D0B62783E1B6009887D0 /* RecipeCard.swift */,
 				EDF8D0C12783FC1C009887D0 /* RecipeCard.storyboard */,
-				EDA575512783CF0400942E60 /* RecieptListViewController.swift */,
 				EDF8D0BB2783E74B009887D0 /* RecieptCell.swift */,
 				EDF8D0BC2783E74B009887D0 /* RecieptCell.xib */,
 				ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */,
@@ -207,6 +211,7 @@
 		EDF8D0C32784A9E1009887D0 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				ED5868562784F17F0092C0B5 /* PresentationController.swift */,
 				EDBB020627824E780052A190 /* ActualGradientButton.swift */,
 				ED58684B2784B24F0092C0B5 /* ShadowView.swift */,
 				ED58684D2784C00D0092C0B5 /* CheckBox.swift */,
@@ -358,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
-				ED5868632784F17F0092C0B5 /* MainViewController.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
 				EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */,
