@@ -217,7 +217,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-ii-hyf">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-ii-hyf">
                                 <rect key="frame" x="0.0" y="243" width="414" height="570"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -372,55 +372,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7X-YT-g4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2153.6231884057975" y="793.52678571428567"/>
-        </scene>
-        <!--Recipe Card View Controller-->
-        <scene sceneID="Q4j-Y2-Zat">
-            <objects>
-                <viewController storyboardIdentifier="recipeCard" id="pMD-mm-ijG" customClass="RecipeCardViewController" customModule="ItEasy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GVY-jm-HSO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeCard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-Ky-WJb">
-                                <rect key="frame" x="20" y="64" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="4Sm-l0-Teo"/>
-                                    <constraint firstAttribute="height" constant="60" id="5FS-b9-zb5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-u9-U2u">
-                                <rect key="frame" x="334" y="64" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="D6y-iU-Yqt"/>
-                                    <constraint firstAttribute="width" constant="60" id="UJK-Io-Q9p"/>
-                                    <constraint firstAttribute="height" constant="60" id="fwv-vs-kk7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="z33-75-NQw"/>
-                                </constraints>
-                                <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="doneFilter:" destination="G9H-wj-30c" eventType="touchUpInside" id="oQq-Jf-cwo"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="665-8T-c5Z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="665-8T-c5Z" firstAttribute="trailing" secondItem="UyY-Ky-WJb" secondAttribute="trailing" constant="20" id="EpF-dI-OJe"/>
-                            <constraint firstItem="2aG-u9-U2u" firstAttribute="top" secondItem="665-8T-c5Z" secondAttribute="top" constant="20" id="FJ4-Uf-jxG"/>
-                            <constraint firstItem="UyY-Ky-WJb" firstAttribute="top" secondItem="665-8T-c5Z" secondAttribute="top" constant="20" id="NE3-Au-JKK"/>
-                            <constraint firstItem="UyY-Ky-WJb" firstAttribute="leading" secondItem="665-8T-c5Z" secondAttribute="leading" constant="20" id="fxd-mI-8GE"/>
-                            <constraint firstItem="665-8T-c5Z" firstAttribute="trailing" secondItem="2aG-u9-U2u" secondAttribute="trailing" constant="20" id="spQ-w2-9Pm"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dK9-BY-cCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2154" y="1473"/>
         </scene>
         <!--Filters-->
         <scene sceneID="mdU-qe-R2C">

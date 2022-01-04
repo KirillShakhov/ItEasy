@@ -40,8 +40,8 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecieptCell", for: indexPath) as! RecieptCell
         
-		cell.image.image = locationImages[indexPath.row]
-		cell.title.text = locationNames[indexPath.row]
+		cell.image.image = locationImages[indexPath.item]
+		cell.title.text = locationNames[indexPath.item]
 
         
         //This creates the shadows and modifies the cards a little bit
@@ -60,5 +60,21 @@ class RecieptViewController: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
 
-}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let id = indexPath.item
+        print(id)
+        
+		let storyboard = UIStoryboard(name: "RecipeCard", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "RecipeCard")
+		vc.modalPresentationStyle = .fullScreen
+		
+//		self.navigationController?.pushViewController(vc, animated: true)
+		
+		present(vc, animated:true)
 
+		
+//		let slideVC = RecipeCardViewController()
+//		slideVC.modalPresentationStyle = .pageSheet
+	}
+}

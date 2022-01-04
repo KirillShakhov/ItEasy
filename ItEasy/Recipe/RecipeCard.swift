@@ -7,13 +7,18 @@
 
 import UIKit
 
-class RecipeCardViewController: UIViewController {
-
-    override func viewDidLoad() {
+class RecipeCard: UIViewController {
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 	
+	
+	@IBAction func closeCard(_ sender: Any) {
+		self.dismiss(animated: true, completion: nil)
+	}
+
 	
 }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Card-->
+        <scene sceneID="TZn-HO-86x">
+            <objects>
+                <viewController storyboardIdentifier="RecipeCard" id="Kz2-T6-Rlg" customClass="RecipeCard" customModule="ItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gHf-yP-nAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeCard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-0S-BqX">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="7hA-5b-U7k"/>
+                                    <constraint firstAttribute="height" constant="60" id="zfV-uo-pmY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-Yg-tyv">
+                                <rect key="frame" x="334" y="64" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="CDb-Sy-xym"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="LJG-u8-I40"/>
+                                    <constraint firstAttribute="height" constant="60" id="sN0-pW-N4L"/>
+                                    <constraint firstAttribute="width" constant="60" id="v7G-p0-fPV"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeCard:" destination="Kz2-T6-Rlg" eventType="touchUpInside" id="kca-Ao-vps"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4uN-lW-QaL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4uN-lW-QaL" firstAttribute="trailing" secondItem="6hb-Yg-tyv" secondAttribute="trailing" constant="20" id="F6v-it-74t"/>
+                            <constraint firstItem="H8R-0S-BqX" firstAttribute="top" secondItem="4uN-lW-QaL" secondAttribute="top" constant="20" id="a4v-CM-JPj"/>
+                            <constraint firstItem="6hb-Yg-tyv" firstAttribute="top" secondItem="4uN-lW-QaL" secondAttribute="top" constant="20" id="nam-HG-IgZ"/>
+                            <constraint firstItem="H8R-0S-BqX" firstAttribute="leading" secondItem="4uN-lW-QaL" secondAttribute="leading" constant="20" id="r0j-Pa-UDF"/>
+                            <constraint firstItem="4uN-lW-QaL" firstAttribute="trailing" secondItem="H8R-0S-BqX" secondAttribute="trailing" constant="20" id="xZg-ec-DM1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C7A-bC-dOY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEI-32-aW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3064" y="1473"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
