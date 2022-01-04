@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -53,7 +53,7 @@
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="PU8-bh-Zmf"/>
+                        <constraint firstAttribute="height" constant="60" id="R6i-h2-ukk"/>
                     </constraints>
                     <color key="tintColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -106,6 +106,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="1nH-kD-om9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4Hv-A2-B2j"/>
                 <constraint firstItem="yyx-QW-Zad" firstAttribute="top" secondItem="NNC-gS-AfA" secondAttribute="bottom" constant="5" id="6Xk-VB-7BE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CSd-SI-1gk" secondAttribute="trailing" constant="45" id="9Ao-KF-ram"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1nH-kD-om9" secondAttribute="trailing" constant="45" id="E1z-K4-DS1"/>
@@ -134,6 +135,11 @@
             <point key="canvasLocation" x="131.8840579710145" y="219.30803571428569"/>
         </view>
     </objects>
+    <designables>
+        <designable name="1nH-kD-om9">
+            <size key="intrinsicContentSize" width="49" height="35"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

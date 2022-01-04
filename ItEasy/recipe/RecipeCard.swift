@@ -12,6 +12,16 @@ class RecipeCard: UIViewController {
     @IBOutlet weak var ingredientTable: UITableView!
     @IBOutlet var cardTitle: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
+    @IBOutlet weak var cookingTime: UILabel!
+    
+    @IBOutlet weak var proteins: UILabel!
+    @IBOutlet weak var fats: UILabel!
+    @IBOutlet weak var carbohydrates: UILabel!
+    
+    @IBOutlet weak var kcal: UILabel!
+    
+    var id_item: Int?
+    
     var itemName: String?
     var itemImage: UIImage?
 

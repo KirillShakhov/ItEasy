@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,7 +28,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNC-gS-AfA">
-                    <rect key="frame" x="45" y="89" width="324" height="45"/>
+                    <rect key="frame" x="45" y="45" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="SZE-F9-RqL"/>
                     </constraints>
@@ -37,25 +37,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyx-QW-Zad">
-                    <rect key="frame" x="45" y="139" width="324" height="23"/>
+                    <rect key="frame" x="45" y="95" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-dO-uzR">
-                    <rect key="frame" x="45" y="207" width="324" height="23"/>
+                    <rect key="frame" x="45" y="163" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWV-W6-WSY">
-                    <rect key="frame" x="45" y="315" width="324" height="23"/>
+                    <rect key="frame" x="45" y="271" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="anung@jagatara.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Xc-ats">
-                    <rect key="frame" x="45" y="358" width="324" height="45"/>
+                    <rect key="frame" x="45" y="314" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="OnY-ea-LLa"/>
                     </constraints>
@@ -63,13 +63,13 @@
                     <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="825-kE-A94">
-                    <rect key="frame" x="45" y="423" width="324" height="23"/>
+                    <rect key="frame" x="45" y="379" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CSd-SI-1gk">
-                    <rect key="frame" x="45" y="466" width="324" height="45"/>
+                    <rect key="frame" x="45" y="422" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="uVF-Uv-TAv"/>
                     </constraints>
@@ -77,7 +77,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
-                    <rect key="frame" x="45" y="250" width="324" height="45"/>
+                    <rect key="frame" x="45" y="206" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PWh-05-aqc"/>
                     </constraints>
@@ -88,7 +88,8 @@
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eg7-5o-6Fh"/>
+                        <constraint firstAttribute="width" constant="324" id="Hba-x4-x0u"/>
+                        <constraint firstAttribute="height" constant="60" id="eg7-5o-6Fh"/>
                     </constraints>
                     <color key="tintColor" systemColor="systemGreenColor"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -147,6 +148,7 @@
                 <constraint firstItem="jKO-WZ-3q0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="eYe-Ds-nIs"/>
                 <constraint firstItem="h5u-lC-Vtp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="eco-IF-l5M"/>
                 <constraint firstItem="CSd-SI-1gk" firstAttribute="top" secondItem="825-kE-A94" secondAttribute="bottom" constant="20" id="jz0-H7-Nip"/>
+                <constraint firstItem="jKO-WZ-3q0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pqE-m0-QIQ"/>
                 <constraint firstItem="825-kE-A94" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="ui9-kZ-oAa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QJS-Xc-ats" secondAttribute="trailing" constant="45" id="ulb-pT-tSi"/>
                 <constraint firstItem="jzC-dO-uzR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="wXD-hf-Yt6"/>
