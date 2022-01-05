@@ -13,9 +13,9 @@ class Sender{
 		let semaphore = DispatchSemaphore(value: 0)
 		
 		var result: String = ""
-		
+			
 		let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
-			result = String(data: data!, encoding: String.Encoding.utf8)!
+			result = String(data: (data ?? "".data(using: String.Encoding.utf8))!, encoding: String.Encoding.utf8)!
 			semaphore.signal()
 		}
 		

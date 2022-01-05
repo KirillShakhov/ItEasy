@@ -19,27 +19,32 @@ class LoadingAuthViewController: UIViewController {
 		let defaults = UserDefaults.standard
 		if let username = defaults.string(forKey: "username") {
 			if let pass = defaults.string(forKey: "pass"){
-			let result = Sender.query(address: "http://127.0.0.1:8090/auth?login="+username+"&pass="+pass)
-			let json = result.data(using: .utf8)!
-			let decoder = JSONDecoder()
-			struct Request: Codable {
-				var status: String
-				var message: String?
-			}
-			do{
-				let product = try decoder.decode(Request.self, from: json)
-				if(product.status == "ok") {
-					goToView(name: "Main", withIdentifier: "MainViewController")
-				}
-				else{
-					defaults.removeObject(forKey: "username")
-					defaults.removeObject(forKey: "pass")
-					goToView(name: "Auth", withIdentifier: "Auth")
-				}
-			}
+				do{
+					let result = Sender.query(address: "http://127.0.0.1:8090/auth?login="+username+"&pass="+pass)
+					let json = result.data(using: .utf8)!
+					let decoder = JSONDecoder()
+					struct Request: Codable {
+						var status: String
+						var message: String?
+					}
+					do{
+						let product = try decoder.decode(Request.self, from: json)
+						if(product.status == "ok") {
+							goToView(name: "Main", withIdentifier: "MainViewController")
+						}
+						else{
+							defaults.removeObject(forKey: "username")
+							defaults.removeObject(forKey: "pass")
+							goToView(name: "Auth", withIdentifier: "Auth")
+						}
+					}
+						catch{
+							print("Неожиданная ошибка: \(error).")
+							return
+						}
+					}
 				catch{
-					print("Неожиданная ошибка: \(error).")
-					return
+					exit(0)
 				}
 			}
 		}
