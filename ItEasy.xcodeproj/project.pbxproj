@@ -12,6 +12,7 @@
 		ED5460BB278615240044BE04 /* RecipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BA278615240044BE04 /* RecipeSteps.swift */; };
 		ED5460BD278623670044BE04 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BC278623670044BE04 /* Home.swift */; };
 		ED5460BF278627830044BE04 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BE278627830044BE04 /* Sender.swift */; };
+		ED5460C1278643EB0044BE04 /* LoadingAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460C0278643EB0044BE04 /* LoadingAuthViewController.swift */; };
 		ED58684A2784ADA90092C0B5 /* RecipeCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */; };
 		ED58684C2784B24F0092C0B5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684B2784B24F0092C0B5 /* ShadowView.swift */; };
 		ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684D2784C00D0092C0B5 /* CheckBox.swift */; };
@@ -64,6 +65,7 @@
 		ED5460BA278615240044BE04 /* RecipeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSteps.swift; sourceTree = "<group>"; };
 		ED5460BC278623670044BE04 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ED5460BE278627830044BE04 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
+		ED5460C0278643EB0044BE04 /* LoadingAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAuthViewController.swift; sourceTree = "<group>"; };
 		ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardImage.swift; sourceTree = "<group>"; };
 		ED58684B2784B24F0092C0B5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		ED58684D2784C00D0092C0B5 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */,
 				ED58685A2784F17F0092C0B5 /* Auth.storyboard */,
 				ED58685E2784F17F0092C0B5 /* AuthController.swift */,
+				ED5460C0278643EB0044BE04 /* LoadingAuthViewController.swift */,
 				ED58685C2784F17F0092C0B5 /* SlideWindow.swift */,
 			);
 			path = auth;
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
+				ED5460C1278643EB0044BE04 /* LoadingAuthViewController.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
 				ED5460BF278627830044BE04 /* Sender.swift in Sources */,
