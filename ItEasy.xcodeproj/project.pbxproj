@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED12345E2782909000ABF16E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED12345D2782909000ABF16E /* Launch Screen.storyboard */; };
 		ED152A1D278296A2008D73AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED152A1C278296A2008D73AC /* Main.storyboard */; };
+		ED5460BB278615240044BE04 /* RecipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BA278615240044BE04 /* RecipeSteps.swift */; };
 		ED58684A2784ADA90092C0B5 /* RecipeCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */; };
 		ED58684C2784B24F0092C0B5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684B2784B24F0092C0B5 /* ShadowView.swift */; };
 		ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684D2784C00D0092C0B5 /* CheckBox.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		ED12345D2782909000ABF16E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		ED152A1C278296A2008D73AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ED5460BA278615240044BE04 /* RecipeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSteps.swift; sourceTree = "<group>"; };
 		ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardImage.swift; sourceTree = "<group>"; };
 		ED58684B2784B24F0092C0B5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		ED58684D2784C00D0092C0B5 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		EDF8D0BA2783E2EF009887D0 /* recipe */ = {
 			isa = PBXGroup;
 			children = (
+				ED5460BA278615240044BE04 /* RecipeSteps.swift */,
 				EDF8D0B62783E1B6009887D0 /* RecipeCard.swift */,
 				EDF8D0C12783FC1C009887D0 /* RecipeCard.storyboard */,
 				EDF8D0BB2783E74B009887D0 /* RecieptCell.swift */,
@@ -371,6 +374,7 @@
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,
 				EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */,
 				ED58684A2784ADA90092C0B5 /* RecipeCardImage.swift in Sources */,
+				ED5460BB278615240044BE04 /* RecipeSteps.swift in Sources */,
 				EDF8D0BD2783E74B009887D0 /* RecieptCell.swift in Sources */,
 				ED58684C2784B24F0092C0B5 /* ShadowView.swift in Sources */,
 				EDBB01B527821BD00052A190 /* SceneDelegate.swift in Sources */,
