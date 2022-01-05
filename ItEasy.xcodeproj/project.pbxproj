@@ -10,6 +10,8 @@
 		ED12345E2782909000ABF16E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED12345D2782909000ABF16E /* Launch Screen.storyboard */; };
 		ED152A1D278296A2008D73AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED152A1C278296A2008D73AC /* Main.storyboard */; };
 		ED5460BB278615240044BE04 /* RecipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BA278615240044BE04 /* RecipeSteps.swift */; };
+		ED5460BD278623670044BE04 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BC278623670044BE04 /* Home.swift */; };
+		ED5460BF278627830044BE04 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5460BE278627830044BE04 /* Sender.swift */; };
 		ED58684A2784ADA90092C0B5 /* RecipeCardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */; };
 		ED58684C2784B24F0092C0B5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684B2784B24F0092C0B5 /* ShadowView.swift */; };
 		ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58684D2784C00D0092C0B5 /* CheckBox.swift */; };
@@ -60,6 +62,8 @@
 		ED12345D2782909000ABF16E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		ED152A1C278296A2008D73AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED5460BA278615240044BE04 /* RecipeSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSteps.swift; sourceTree = "<group>"; };
+		ED5460BC278623670044BE04 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		ED5460BE278627830044BE04 /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		ED5868492784ADA90092C0B5 /* RecipeCardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardImage.swift; sourceTree = "<group>"; };
 		ED58684B2784B24F0092C0B5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		ED58684D2784C00D0092C0B5 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDA575512783CF0400942E60 /* RecieptListViewController.swift */,
+				ED5460BC278623670044BE04 /* Home.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				EDBB020627824E780052A190 /* ActualGradientButton.swift */,
 				ED58684B2784B24F0092C0B5 /* ShadowView.swift */,
 				ED58684D2784C00D0092C0B5 /* CheckBox.swift */,
+				ED5460BE278627830044BE04 /* Sender.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -368,7 +374,9 @@
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
+				ED5460BF278627830044BE04 /* Sender.swift in Sources */,
 				EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */,
+				ED5460BD278623670044BE04 /* Home.swift in Sources */,
 				ED5868672784F17F0092C0B5 /* AuthController.swift in Sources */,
 				EDF8D0B72783E1B6009887D0 /* RecipeCard.swift in Sources */,
 				EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */,

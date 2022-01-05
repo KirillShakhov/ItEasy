@@ -9,10 +9,12 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var registerButton: UIButton!
 	@IBOutlet weak var slideIdicator: UIView!
-
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var loginField: UITextField!
+    
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     
@@ -33,10 +35,38 @@ class RegisterViewController: UIViewController {
 	
     
     @IBAction func register(_ sender: UIButton) {
-//		let slideVC = MainController()
-//		self.present(slideVC, animated: true, completion: nil)
+		let result = Sender.query(address: "http://127.0.0.1:8090/auth/reg?login="+loginField.text!+"&pass="+passField.text!+"&email="+emailField.text!)
+		let json = result.data(using: .utf8)!
+		let decoder = JSONDecoder()
+		struct Request: Codable {
+			var status: String
+			var message: String?
+		}
+		do{
+			let product = try decoder.decode(Request.self, from: json)
+			print(product.status) // Prints "Durian"
+			if(product.status == "ok") {
+				let defaults = UserDefaults.standard
+				defaults.set(loginField.text!, forKey: "username")
+				defaults.set(passField.text!, forKey: "pass")
 
-
+				let storyboard = UIStoryboard(name: "Main", bundle: nil)
+				let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+				vc.modalPresentationStyle = .fullScreen
+				present(vc, animated: true, completion: nil)
+			}
+			else{
+				let alert = UIAlertController(title: "Регистрация", message: product.message, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
+				self.present(alert, animated: true)
+			}
+		}
+		catch{
+			return
+		}
+	}
+	
+	func goToMain(){
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
 		vc.modalPresentationStyle = .fullScreen

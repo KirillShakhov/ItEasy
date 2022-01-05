@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="ItEasy" customModuleProvider="target">
             <connections>
+                <outlet property="emailField" destination="QJS-Xc-ats" id="DXN-ph-G4u"/>
+                <outlet property="loginField" destination="Sd4-Ai-aOU" id="beh-gh-Igk"/>
+                <outlet property="passField" destination="CSd-SI-1gk" id="jFL-8F-K22"/>
                 <outlet property="slideIdicator" destination="h5u-lC-Vtp" id="dp4-sa-hOB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="opn-YC-DFv"/>
             </connections>

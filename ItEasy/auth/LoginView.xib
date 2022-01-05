@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
                 <outlet property="loginButton" destination="1nH-kD-om9" id="MqU-Ef-5Gh"/>
+                <outlet property="loginField" destination="Sd4-Ai-aOU" id="8be-cp-FFS"/>
+                <outlet property="passField" destination="CSd-SI-1gk" id="uXs-lF-zOm"/>
                 <outlet property="slideIdicator" destination="h5u-lC-Vtp" id="dp4-sa-hOB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="opn-YC-DFv"/>
             </connections>
@@ -79,6 +81,9 @@
                             <color key="value" red="0.46274507050000002" green="0.59607845540000004" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="83X-GK-nFa"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
                     <rect key="frame" x="45" y="250" width="324" height="45"/>

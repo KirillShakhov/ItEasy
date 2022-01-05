@@ -9,6 +9,42 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    
+    @IBAction func login(_ sender: Any) {
+		let result = Sender.query(address: "http://127.0.0.1:8090/auth?login="+loginField.text!+"&pass="+passField.text!)
+		let json = result.data(using: .utf8)!
+		let decoder = JSONDecoder()
+		struct Request: Codable {
+			var status: String
+			var message: String?
+		}
+		do{
+			let product = try decoder.decode(Request.self, from: json)
+			print(product.status) // Prints "Durian"
+			if(product.status == "ok") {
+				let defaults = UserDefaults.standard
+				defaults.set(loginField.text!, forKey: "username")
+				defaults.set(passField.text!, forKey: "pass")
+				
+				let storyboard = UIStoryboard(name: "Main", bundle: nil)
+				let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+				vc.modalPresentationStyle = .fullScreen
+				present(vc, animated: true, completion: nil)
+			}
+			else{
+				let alert = UIAlertController(title: "Авторизация", message: product.message, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
+				self.present(alert, animated: true)
+			}
+		}
+		catch{
+			return
+		}
+    }
+    
     var hasSetPointOrigin = false
     @IBOutlet weak var loginButton: UIButton!
     
