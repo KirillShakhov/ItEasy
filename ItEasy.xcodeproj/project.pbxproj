@@ -29,6 +29,7 @@
 		EDA02FCD27874D4F00BB5BBE /* GroceryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */; };
 		EDA02FCE27874D4F00BB5BBE /* GroceryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */; };
 		EDA02FD02787528900BB5BBE /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FCF2787528900BB5BBE /* RecipeModel.swift */; };
+		EDA02FD22787550500BB5BBE /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FD12787550500BB5BBE /* GroceryList.swift */; };
 		EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5754B2783B8B800942E60 /* FilterViewController.swift */; };
 		EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA575512783CF0400942E60 /* RecieptListViewController.swift */; };
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
@@ -85,6 +86,7 @@
 		EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListCell.swift; sourceTree = "<group>"; };
 		EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryListCell.xib; sourceTree = "<group>"; };
 		EDA02FCF2787528900BB5BBE /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		EDA02FD12787550500BB5BBE /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
 		EDA5754B2783B8B800942E60 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EDA575512783CF0400942E60 /* RecieptListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptListViewController.swift; sourceTree = "<group>"; };
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDA575512783CF0400942E60 /* RecieptListViewController.swift */,
 				ED5460BC278623670044BE04 /* Home.swift */,
+				EDA02FD12787550500BB5BBE /* GroceryList.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
 				EDA02FD02787528900BB5BBE /* RecipeModel.swift in Sources */,
 				ED5460C1278643EB0044BE04 /* LoadingAuthViewController.swift in Sources */,
+				EDA02FD22787550500BB5BBE /* GroceryList.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
 				ED5460BF278627830044BE04 /* Sender.swift in Sources */,
