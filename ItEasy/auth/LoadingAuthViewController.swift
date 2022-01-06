@@ -16,44 +16,22 @@ class LoadingAuthViewController: UIViewController {
     }
     
 	override func viewDidAppear(_ animated: Bool) {
-//		let defaults = UserDefaults.standard
-//		if let username = defaults.string(forKey: "username") {
-//			if let pass = defaults.string(forKey: "pass"){
-//				do{
-//					let result = Sender.query(address: "http://127.0.0.1:8090/auth?login="+username+"&pass="+pass)
-//					let json = result.data(using: .utf8)!
-//					let decoder = JSONDecoder()
-//					struct Request: Codable {
-//						var status: String
-//						var message: String?
-//					}
-//					do{
-//						let product = try decoder.decode(Request.self, from: json)
-//						if(product.status == "ok") {
-//							goToView(name: "Main", withIdentifier: "MainViewController")
-//						}
-//						else{
-//							defaults.removeObject(forKey: "username")
-//							defaults.removeObject(forKey: "pass")
-//							goToView(name: "Auth", withIdentifier: "Auth")
-//						}
-//					}
-//						catch{
-//							print("Неожиданная ошибка: \(error).")
-//							return
-//						}
-//					}
-//				catch{
-//					exit(0)
-//				}
-//			}
-//		}
-//		else{
-//			goToView(name: "Auth", withIdentifier: "Auth")
-//		}
-		
-		goToView(name: "Main", withIdentifier: "MainViewController")
-
+		let defaults = UserDefaults.standard
+		if defaults.string(forKey: "token") != nil {
+			let result = Sender.querySyncGetJSON(address: "http://127.0.0.1:8090/users")
+			print(result)
+			if(result.code == 200) {
+				goToView(name: "Main", withIdentifier: "MainViewController")
+			}
+			else{
+				print("Не достоин")
+				defaults.removeObject(forKey: "token")
+				goToView(name: "Auth", withIdentifier: "Auth")
+			}
+		}
+		else{
+			goToView(name: "Auth", withIdentifier: "Auth")
+		}
 	}
 	
 	func goToView(name: String, withIdentifier: String){

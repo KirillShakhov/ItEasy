@@ -12,7 +12,7 @@ class GroceryList: UIViewController {
     @IBOutlet weak var groceryListTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
         groceryListTable.dataSource = self
         groceryListTable.delegate = self
 		

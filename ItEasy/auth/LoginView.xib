@@ -91,7 +91,7 @@
                         <constraint firstAttribute="height" constant="45" id="JPc-qC-6ej"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="nickname"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="825-kE-A94">
                     <rect key="frame" x="45" y="315" width="324" height="23"/>

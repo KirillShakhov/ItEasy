@@ -14,30 +14,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passField: UITextField!
     
     @IBAction func login(_ sender: Any) {
-		let result = Sender.query(address: "http://127.0.0.1:8090/auth?login="+loginField.text!+"&pass="+passField.text!)
-		let json = result.data(using: .utf8)!
-		let decoder = JSONDecoder()
-		struct Request: Codable {
-			var status: String
-			var message: String?
-		}
 		do{
-			let product = try decoder.decode(Request.self, from: json)
-			print(product.status) // Prints "Durian"
-			if(product.status == "ok") {
+			let json_req: [String: Any] = ["username": loginField.text!,
+									   "password": passField.text!]
+
+			let result = Sender.querySyncPostJSON(address: "http://127.0.0.1:8090/signin", json: json_req);
+			print(result)
+			
+			let json = result.body!.data(using: .utf8)!
+			let decoder = JSONDecoder()
+			struct Request: Codable {
+				var accessToken: String?
+			}
+		
+			let req = try decoder.decode(Request.self, from: json)
+			if req.accessToken != nil {
 				let defaults = UserDefaults.standard
-				defaults.set(loginField.text!, forKey: "username")
-				defaults.set(passField.text!, forKey: "pass")
-				
+				defaults.set("Bearer "+req.accessToken!, forKey: "token")
+				print("Bearer "+req.accessToken!)
 				let storyboard = UIStoryboard(name: "Main", bundle: nil)
 				let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
 				vc.modalPresentationStyle = .fullScreen
 				present(vc, animated: true, completion: nil)
-			}
-			else{
-				let alert = UIAlertController(title: "Авторизация", message: product.message, preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
-				self.present(alert, animated: true)
+				
+//				else{
+//					let alert = UIAlertController(title: "Авторизация", message: product.message, preferredStyle: .alert)
+//					alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
+//					self.present(alert, animated: true)
+//				}
 			}
 		}
 		catch{

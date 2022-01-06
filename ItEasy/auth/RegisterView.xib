@@ -85,7 +85,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PWh-05-aqc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-WZ-3q0" customClass="ActualGradientButton" customModule="ItEasy" customModuleProvider="target">
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
