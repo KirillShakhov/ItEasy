@@ -26,6 +26,9 @@
 		ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685D2784F17F0092C0B5 /* LoginViewController.swift */; };
 		ED5868672784F17F0092C0B5 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685E2784F17F0092C0B5 /* AuthController.swift */; };
 		ED5868682784F17F0092C0B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */; };
+		EDA02FCD27874D4F00BB5BBE /* GroceryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */; };
+		EDA02FCE27874D4F00BB5BBE /* GroceryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */; };
+		EDA02FD02787528900BB5BBE /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FCF2787528900BB5BBE /* RecipeModel.swift */; };
 		EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5754B2783B8B800942E60 /* FilterViewController.swift */; };
 		EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA575512783CF0400942E60 /* RecieptListViewController.swift */; };
 		EDBB01B327821BD00052A190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBB01B227821BD00052A190 /* AppDelegate.swift */; };
@@ -79,6 +82,9 @@
 		ED58685D2784F17F0092C0B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED58685E2784F17F0092C0B5 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListCell.swift; sourceTree = "<group>"; };
+		EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryListCell.xib; sourceTree = "<group>"; };
+		EDA02FCF2787528900BB5BBE /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		EDA5754B2783B8B800942E60 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EDA575512783CF0400942E60 /* RecieptListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieptListViewController.swift; sourceTree = "<group>"; };
 		EDBB01AF27821BD00052A190 /* ItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +155,15 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		EDA02FCA27874D2700BB5BBE /* grocery */ = {
+			isa = PBXGroup;
+			children = (
+				EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */,
+				EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */,
+			);
+			path = grocery;
+			sourceTree = "<group>";
+		};
 		EDBB01A627821BD00052A190 = {
 			isa = PBXGroup;
 			children = (
@@ -172,16 +187,18 @@
 		EDBB01B127821BD00052A190 /* ItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				EDA02FCA27874D2700BB5BBE /* grocery */,
 				ED8EC181278501FD00420527 /* main */,
-				EDF8D0C32784A9E1009887D0 /* util */,
 				EDF8D0BA2783E2EF009887D0 /* recipe */,
 				ED5868552784F17F0092C0B5 /* auth */,
+				EDF8D0C32784A9E1009887D0 /* util */,
 				EDBB01B227821BD00052A190 /* AppDelegate.swift */,
 				EDBB01B427821BD00052A190 /* SceneDelegate.swift */,
 				ED12345D2782909000ABF16E /* Launch Screen.storyboard */,
 				EDBB01BB27821BD00052A190 /* Assets.xcassets */,
 				EDBB01C027821BD00052A190 /* Info.plist */,
 				EDA5754B2783B8B800942E60 /* FilterViewController.swift */,
+				EDA02FCF2787528900BB5BBE /* RecipeModel.swift */,
 			);
 			path = ItEasy;
 			sourceTree = "<group>";
@@ -350,6 +367,7 @@
 				ED5868522784C4F90092C0B5 /* IngredientCell.xib in Resources */,
 				EDF8D0C22783FC1C009887D0 /* RecipeCard.storyboard in Resources */,
 				EDF8D0BE2783E74B009887D0 /* RecieptCell.xib in Resources */,
+				EDA02FCE27874D4F00BB5BBE /* GroceryListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +393,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
+				EDA02FD02787528900BB5BBE /* RecipeModel.swift in Sources */,
 				ED5460C1278643EB0044BE04 /* LoadingAuthViewController.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
 				ED5460BF278627830044BE04 /* Sender.swift in Sources */,
+				EDA02FCD27874D4F00BB5BBE /* GroceryListCell.swift in Sources */,
 				EDA575522783CF0400942E60 /* RecieptListViewController.swift in Sources */,
 				ED5460BD278623670044BE04 /* Home.swift in Sources */,
 				ED5868672784F17F0092C0B5 /* AuthController.swift in Sources */,
