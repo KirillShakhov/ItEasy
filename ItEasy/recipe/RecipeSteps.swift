@@ -17,7 +17,8 @@ class RecipeSteps: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
     @IBAction func goBack(_ sender: Any) {
         
     }

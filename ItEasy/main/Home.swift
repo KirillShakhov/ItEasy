@@ -71,8 +71,8 @@ extension Home: UICollectionViewDataSource{
 		let storyboard = UIStoryboard(name: "RecipeCard", bundle: nil)
 		
 		guard let vc = storyboard.instantiateViewController(identifier: "RecipeCard") as? RecipeCard else { return }
-		vc.itemName = RecipeModel.getLocationNames()[indexPath.item]
-		vc.itemImage = RecipeModel.getLocationImages()[indexPath.item]
+//		vc.rec = RecipeModel.getLocationNames()[indexPath.item]
+//		vc.itemImage = RecipeModel.getLocationImages()[indexPath.item]
 
 //		let vc = storyboard.instantiateViewController(withIdentifier: "RecipeCard")
 		vc.modalPresentationStyle = .fullScreen

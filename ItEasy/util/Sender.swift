@@ -104,6 +104,12 @@ class Sender{
 	static func querySyncGetJSON(address: String) -> Response {
 		return querySyncJSON(address: address, json: nil, method: "GET")
 	}
+	static func querySyncPost(address: String) -> Response {
+		return querySyncJSON(address: address, json: nil, method: "POST")
+	}
+	static func querySyncGet(address: String) -> Response {
+		return querySyncJSON(address: address, json: nil, method: "GET")
+	}
 //	static func query(address: String) -> String {
 //		return querySync(address: address)
 //	}

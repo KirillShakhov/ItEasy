@@ -20,11 +20,9 @@ class RecipeCard: UIViewController {
     
     @IBOutlet weak var kcal: UILabel!
     
-    var id_item: Int?
-    
-    var itemName: String?
-    var itemImage: UIImage?
-
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
+	var recipe: Recipes.Recipe?
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +30,25 @@ class RecipeCard: UIViewController {
         ingredientTable.dataSource = self
         ingredientTable.delegate = self
         
-	
         
-        cardTitle.text = itemName
-		cardImage.image = itemImage
+		cardTitle.text = recipe?.name
+		kcal.text = String(format: "%f", recipe!.kcal)
+		cookingTime.text = recipe?.cookingTime
+		proteins.text = String(format: "%f", recipe!.proteins)
+		fats.text = String(format: "%f", recipe!.fats)
+		carbohydrates.text = String(format: "%f", recipe!.carbohydrates)
+
+		
+		DispatchQueue.global().async {
+			if let data = try? Data(contentsOf: URL(string: self.recipe!.image)!) {
+				if let image = UIImage(data: data) {
+					DispatchQueue.main.async {
+						self.cardImage.image = image
+						self.activityIndicator.isHidden = true
+					}
+				}
+			}
+		}
 		
 		ingredientTable.register(UINib(nibName: "IngredientCell", bundle: nil), forCellReuseIdentifier: "IngredientCell")
 

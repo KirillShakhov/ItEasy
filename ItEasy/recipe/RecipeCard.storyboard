@@ -29,8 +29,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-g0-Eav" userLabel="ShadowView" customClass="ShadowView" customModule="ItEasy" customModuleProvider="target">
                                 <rect key="frame" x="20" y="124" width="374" height="200"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olive" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-qB-J1O" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-qB-J1O" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                        <color key="backgroundColor" red="0.81214490620000002" green="0.81214490620000002" blue="0.81214490620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -83,11 +84,16 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </visualEffectView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="27d-CZ-Pk9">
+                                        <rect key="frame" x="177" y="90" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="k8f-YN-UBm" secondAttribute="trailing" constant="10" id="00B-6Q-rMG"/>
                                     <constraint firstAttribute="bottom" secondItem="k8f-YN-UBm" secondAttribute="bottom" constant="10" id="VOU-AU-LzE"/>
+                                    <constraint firstItem="27d-CZ-Pk9" firstAttribute="centerX" secondItem="IdJ-g0-Eav" secondAttribute="centerX" id="ZoG-D4-1D0"/>
+                                    <constraint firstItem="27d-CZ-Pk9" firstAttribute="centerY" secondItem="IdJ-g0-Eav" secondAttribute="centerY" id="cUm-K9-WDU"/>
                                     <constraint firstAttribute="height" constant="200" id="gVy-ZK-Dtl"/>
                                     <constraint firstItem="CWs-qB-J1O" firstAttribute="leading" secondItem="IdJ-g0-Eav" secondAttribute="leading" id="sOD-0W-cO0"/>
                                     <constraint firstItem="CWs-qB-J1O" firstAttribute="top" secondItem="IdJ-g0-Eav" secondAttribute="top" id="sYG-lo-qH6"/>
@@ -312,6 +318,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="C7A-bC-dOY"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="27d-CZ-Pk9" id="kwI-4i-jLn"/>
                         <outlet property="carbohydrates" destination="cZs-m2-q4e" id="uje-Rg-PDc"/>
                         <outlet property="cardImage" destination="CWs-qB-J1O" id="bSb-ge-bW0"/>
                         <outlet property="cardTitle" destination="H8R-0S-BqX" id="GfZ-Mn-1fU"/>
@@ -432,8 +439,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-MP-J5K" userLabel="ShadowView" customClass="ShadowView" customModule="ItEasy" customModuleProvider="target">
                                 <rect key="frame" x="20" y="428" width="374" height="300"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olive" translatesAutoresizingMaskIntoConstraints="NO" id="smh-GG-Gkx" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smh-GG-Gkx" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
+                                        <color key="backgroundColor" red="0.81214490620000002" green="0.81214490620000002" blue="0.81214490620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -441,12 +449,17 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-QL-c5g">
+                                        <rect key="frame" x="177" y="140" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="9p6-QL-c5g" firstAttribute="centerY" secondItem="sgY-MP-J5K" secondAttribute="centerY" id="4nM-bK-Dff"/>
                                     <constraint firstAttribute="bottom" secondItem="smh-GG-Gkx" secondAttribute="bottom" id="FgE-Be-w5F"/>
                                     <constraint firstItem="smh-GG-Gkx" firstAttribute="top" secondItem="sgY-MP-J5K" secondAttribute="top" id="bEK-xh-rqv"/>
                                     <constraint firstAttribute="trailing" secondItem="smh-GG-Gkx" secondAttribute="trailing" id="djv-mc-3iY"/>
+                                    <constraint firstItem="9p6-QL-c5g" firstAttribute="centerX" secondItem="sgY-MP-J5K" secondAttribute="centerX" id="fx7-AM-x2D"/>
                                     <constraint firstItem="smh-GG-Gkx" firstAttribute="leading" secondItem="sgY-MP-J5K" secondAttribute="leading" id="gKj-wE-Cw3"/>
                                     <constraint firstAttribute="height" constant="300" id="mSN-Tg-MMo"/>
                                 </constraints>
@@ -477,6 +490,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="9p6-QL-c5g" id="Gac-ML-Jwf"/>
                         <outlet property="allSteps" destination="bJE-85-If8" id="X9b-dE-ez5"/>
                         <outlet property="backButton" destination="mZS-HF-TG5" id="gZ0-aa-AlU"/>
                         <outlet property="currentStep" destination="Bcb-j1-jZg" id="mzu-Vp-bHa"/>
@@ -491,18 +505,11 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="CWs-qB-J1O">
-            <size key="intrinsicContentSize" width="870" height="480"/>
-        </designable>
         <designable name="RAr-jZ-Sr8">
             <size key="intrinsicContentSize" width="57" height="39.5"/>
         </designable>
-        <designable name="smh-GG-Gkx">
-            <size key="intrinsicContentSize" width="870" height="480"/>
-        </designable>
     </designables>
     <resources>
-        <image name="olive" width="870" height="480"/>
         <image name="pencil.slash" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

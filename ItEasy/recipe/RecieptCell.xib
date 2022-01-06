@@ -23,8 +23,9 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="57E-mE-hgC" customClass="ShadowView" customModule="ItEasy" customModuleProvider="target">
                                 <rect key="frame" x="8" y="10" width="398" height="150"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olive" translatesAutoresizingMaskIntoConstraints="NO" id="HUz-EP-eAR" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HUz-EP-eAR" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="150"/>
+                                        <color key="backgroundColor" red="0.81214490623185132" green="0.81214490623185132" blue="0.81214490623185132" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -32,6 +33,9 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-cz-aC5">
+                                        <rect key="frame" x="189" y="65" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-1e-Cdg">
                                         <rect key="frame" x="20" y="85" width="358" height="45"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yVY-X1-WM9">
@@ -112,6 +116,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Oe6-cz-aC5" firstAttribute="centerY" secondItem="57E-mE-hgC" secondAttribute="centerY" id="BnH-kE-pOa"/>
+                                    <constraint firstItem="Oe6-cz-aC5" firstAttribute="centerX" secondItem="57E-mE-hgC" secondAttribute="centerX" id="Cat-eh-4ho"/>
                                     <constraint firstAttribute="trailing" secondItem="HUz-EP-eAR" secondAttribute="trailing" id="FvK-tI-483"/>
                                     <constraint firstAttribute="bottom" secondItem="HUz-EP-eAR" secondAttribute="bottom" id="Kcg-fu-zr4"/>
                                     <constraint firstItem="HUz-EP-eAR" firstAttribute="leading" secondItem="57E-mE-hgC" secondAttribute="leading" id="epb-bT-T1r"/>
@@ -148,6 +154,7 @@
             </constraints>
             <size key="customSize" width="414" height="170"/>
             <connections>
+                <outlet property="activityIndicator" destination="Oe6-cz-aC5" id="bSd-62-ajJ"/>
                 <outlet property="image" destination="HUz-EP-eAR" id="QYx-dg-gnH"/>
                 <outlet property="kcal" destination="1CD-tZ-r2v" id="uoC-1C-6Ae"/>
                 <outlet property="title" destination="Aaf-6p-Wa1" id="7HS-pJ-4c4"/>
@@ -155,13 +162,7 @@
             <point key="canvasLocation" x="447.82608695652175" y="54.241071428571423"/>
         </collectionViewCell>
     </objects>
-    <designables>
-        <designable name="HUz-EP-eAR">
-            <size key="intrinsicContentSize" width="870" height="480"/>
-        </designable>
-    </designables>
     <resources>
-        <image name="olive" width="870" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -12,6 +12,8 @@ class RecieptCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var kcal: UILabel!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
