@@ -16,6 +16,8 @@ class MenuCard: UIViewController {
 	var menu: MenuModel.Menu?
 	
 	private var recipes = [RecipeModel.Recipe]()
+	var selectMenuId: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.menuList.dataSource = self
@@ -35,10 +37,22 @@ class MenuCard: UIViewController {
 		recipes.append(contentsOf: menu?.friday ?? [])
 		recipes.append(contentsOf: menu?.saturday ?? [])
 		recipes.append(contentsOf: menu?.sunday ?? [])
+		
+		
+		if(menu?.id == selectMenuId){
+			self.menuButtonSelect.setTitle("Selected", for: .normal)
+			self.menuButtonSelect.backgroundColor = UIColor.clear
+		}
     }
     
     @IBAction func selectMenu() {
-        
+		if(menu != nil){
+			if(MenuList.selectMenu(id: menu!.id)){
+				menuList.reloadData()
+			}else{
+				print("Не выбрано")
+			}
+		}
     }
 }
 

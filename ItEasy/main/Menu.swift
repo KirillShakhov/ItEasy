@@ -13,6 +13,7 @@ class MenuList: UIViewController {
     @IBOutlet weak var menuList: UICollectionView!
     
 	var menus: [MenuModel.Menu] = []
+	var selectMenuId: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +21,37 @@ class MenuList: UIViewController {
 		self.menuList.dataSource = self
 		menuList.register(UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
 
-		menus = MenuModel.getMenu()
 		
 		
 		refreshControl.layer.zPosition = -1
 		menuList.refreshControl = refreshControl
-		refreshControl.addTarget(self, action: #selector(updateRecipes(_:)), for: .valueChanged)
+		refreshControl.addTarget(self, action: #selector(updateMenus(_:)), for: .valueChanged)
 		
 		refreshControl.tintColor = UIColor(red:0.25, green:0.85, blue:0.25, alpha:0.6)
 		refreshControl.attributedTitle = NSAttributedString(string: "Update Menu ...")
 
+		menus = MenuModel.getMenu()
+		selectMenuId = MenuModel.getSelectedMenu()
+		updateMenus(self)
     }
 	
-	@objc private func updateRecipes(_ sender: Any) {
+	@objc func updateMenus(_ sender: Any) {
 		menus = MenuModel.getMenu()
+		selectMenuId = MenuModel.getSelectedMenu()
 		self.refreshControl.endRefreshing()
 		menuList.reloadData()
 		print("Updated")
 	}
+	
+	static func selectMenu(id:Int) -> Bool{
+		if(MenuModel.setSelectedMenu(id: id)){
+			return true
+		}
+		else{
+			return false
+		}
+	}
+
 }
 
 extension MenuList: UICollectionViewDataSource{
@@ -48,7 +62,7 @@ extension MenuList: UICollectionViewDataSource{
 		let storyboard = UIStoryboard(name: "MenuCard", bundle: nil)
 		guard let vc = storyboard.instantiateViewController(identifier: "MenuCard") as? MenuCard else { return }
 		let menu = menus[indexPath.item]
-
+		vc.selectMenuId = selectMenuId
 		vc.menu = menu
 		vc.modalPresentationStyle = .popover
 		present(vc, animated:true)
@@ -60,9 +74,11 @@ extension MenuList: UICollectionViewDelegate{
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCell
 		let menu = menus[indexPath.item]
 		cell.menu = menu
+		cell.menuList = self
 		cell.menuName.text = menu.name
 		cell.menuImage.image = nil
 		cell.activityIndicator.isHidden = false
+		
 		DispatchQueue.global().async {
 			if let data = try? Data(contentsOf: URL(string: menu.image)!) {
 				if let image = UIImage(data: data) {
@@ -73,6 +89,31 @@ extension MenuList: UICollectionViewDelegate{
 				}
 			}
 		}
+		if(menu.id == selectMenuId){
+			cell.selectButton.setTitle("Selected", for: .normal)
+			cell.selectButton.backgroundColor = UIColor.clear
+		}
+		else{
+			cell.selectButton.setTitle("Select", for: .normal)
+			cell.selectButton.backgroundColor = UIColor(rgb: 0x9AC39D)
+		}
 		return cell
 	}
+}
+extension UIColor {
+   convenience init(red: Int, green: Int, blue: Int) {
+	   assert(red >= 0 && red <= 255, "Invalid red component")
+	   assert(green >= 0 && green <= 255, "Invalid green component")
+	   assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+	   self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+   }
+
+   convenience init(rgb: Int) {
+	   self.init(
+		   red: (rgb >> 16) & 0xFF,
+		   green: (rgb >> 8) & 0xFF,
+		   blue: rgb & 0xFF
+	   )
+   }
 }

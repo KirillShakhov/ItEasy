@@ -56,7 +56,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="selectMenu" destination="Y6W-OH-hqX" eventType="touchUpOutside" id="Y34-2S-91M"/>
+                                    <action selector="selectMenu" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gcv-gm-Gxe"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tSH-f3-wRu">

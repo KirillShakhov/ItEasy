@@ -54,6 +54,16 @@
                                                         <blurEffect style="regular"/>
                                                     </vibrancyEffect>
                                                 </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Веганский устав" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-aJ-okx">
+                                                    <rect key="frame" x="20" y="0.0" width="319" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="X2v-Vw-mhx"/>
+                                                        <constraint firstAttribute="height" constant="45" id="nL7-q8-TuD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                                    <color key="textColor" red="0.95174400250000002" green="0.95174400250000002" blue="0.95174400250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V9-gp-o9M">
                                                     <rect key="frame" x="269" y="10" width="80" height="25"/>
                                                     <color key="backgroundColor" red="0.60392159219999997" green="0.76470589639999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -71,30 +81,14 @@
                                                         </attributedString>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                                            <color key="value" red="0.60392159219999997" green="0.76470589639999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                                            <color key="value" red="0.46274507050000002" green="0.60000002379999995" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="selectMenu:" destination="gTV-IL-0wX" eventType="touchUpOutside" id="I6K-wN-Khk"/>
+                                                        <action selector="selectMenu:" destination="gTV-IL-0wX" eventType="touchUpInside" id="nzy-WS-Pjb"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Веганский устав" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-aJ-okx">
-                                                    <rect key="frame" x="20" y="0.0" width="319" height="45"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="X2v-Vw-mhx"/>
-                                                        <constraint firstAttribute="height" constant="45" id="nL7-q8-TuD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
-                                                    <color key="textColor" red="0.95174400250000002" green="0.95174400250000002" blue="0.95174400250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aWu-aJ-okx" firstAttribute="leading" secondItem="rP0-wA-6O1" secondAttribute="leading" constant="20" id="54O-g3-Wm2"/>

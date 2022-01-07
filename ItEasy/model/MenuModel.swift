@@ -69,4 +69,51 @@ class MenuModel{
 		}
 		return nil
 	}
+	
+	static func setSelectedMenu(id: Int) -> Bool{
+		do{
+			let res = Sender.querySyncGet(path: "/menu/select/set?id="+String(id))
+			print(res)
+			let json = res.body!.data(using: .utf8)!
+			let decoder = JSONDecoder()
+			struct Response: Codable {
+				var status: String
+			}
+			let result = try decoder.decode(Response.self, from: json)
+			
+			if(result.status == "ok"){
+				return true
+			}
+			else{
+				print(result.status)
+				return false
+			}
+		}catch{
+			print(error)
+		}
+		return false
+	}
+	
+	static func getSelectedMenu() -> Int? {
+		do{
+			let res = Sender.querySyncGet(path: "/menu/select")
+			let json = res.body!.data(using: .utf8)!
+			let decoder = JSONDecoder()
+			struct Response: Codable {
+				var status: String
+				var id: Int
+			}
+			let result = try decoder.decode(Response.self, from: json)
+			
+			if(result.status == "ok"){
+				return result.id
+			}
+			else{
+				print(result.status)
+			}
+		}catch{
+			print(error)
+		}
+		return nil
+	}
 }
