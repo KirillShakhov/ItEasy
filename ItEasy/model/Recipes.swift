@@ -57,6 +57,30 @@ class Recipes{
 		}
 		return []
 	}
+	
+	static func getRecipes(find: String) -> [Recipe]{
+		do{
+			let res = Sender.querySyncGet(path: "/recipes?find="+find)
+			let json = res.body!.data(using: .utf8)!
+			let decoder = JSONDecoder()
+			struct Response: Codable {
+				var status: String
+				var list: [Recipe]
+			}
+			let result = try decoder.decode(Response.self, from: json)
+			
+			if(result.status == "ok"){
+				return result.list
+			}
+			else{
+				print(result.status)
+			}
+		}catch{
+			print(error)
+		}
+		return []
+	}
+	
 	static func getRecipeInfo(id: Int) -> Recipe?{
 		do{
 			let res = Sender.querySyncGet(path: "/recipes/info?id="+String(id))

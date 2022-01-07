@@ -9,16 +9,22 @@ import UIKit
 
 
 class RecieptViewController: UIViewController {
+	@IBOutlet var recipeView: UIView!
 	private let refreshControl = UIRefreshControl()
 
     @IBOutlet weak var recipeList: UICollectionView!
 	
+    @IBOutlet weak var findField: UITextField!
+    
+    
 	var recipes: [Recipes.Recipe] = []
     
 
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
+		let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
+		recipeView.addGestureRecognizer(panGesture)
 	
 		self.recipeList.register(UINib(nibName: "RecieptCell", bundle: nil), forCellWithReuseIdentifier: "RecieptCell")
 
@@ -36,11 +42,30 @@ class RecieptViewController: UIViewController {
 
     }
 	@objc private func updateRecipes(_ sender: Any) {
-		recipes = Recipes.getRecipes()
+		if(findField.text == nil || findField.text == ""){
+			recipes = Recipes.getRecipes()
+		}else{
+			recipes = Recipes.getRecipes(find: findField.text!)
+		}
 		self.refreshControl.endRefreshing()
 		recipeList.reloadData()
 		print("Updated")
 	}
+    
+	@objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
+		recipeView.endEditing(true)
+	}
+    
+	@IBAction func find() {
+		print(findField.text ?? "")
+		dismissKeyboard()
+		updateRecipes(self)
+	}
+
+	@objc func dismissKeyboard() {
+		view.endEditing(true)
+	}
+    
 }
 
 extension RecieptViewController: UICollectionViewDelegate{
@@ -50,6 +75,7 @@ extension RecieptViewController: UICollectionViewDelegate{
 		
 		cell.title.text = recipe.name
 		cell.kcal.text = String(format: "%.1f", recipe.kcal)
+		cell.image.image = nil
 		DispatchQueue.global().async {
 			if let data = try? Data(contentsOf: URL(string: recipe.image)!) {
 				if let image = UIImage(data: data) {

@@ -45,7 +45,7 @@ class Sender{
 		
 
 		// create post request
-		let url = URL(string: address+path)!
+		let url = URL(string: (address+path).encodeUrl)!
 		var request = URLRequest(url: url)
 		request.httpMethod = method
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -113,4 +113,14 @@ class Sender{
 //	static func query(address: String) -> String {
 //		return querySync(address: address)
 //	}
+}
+extension String{
+	var encodeUrl : String
+	{
+		return self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+	}
+	var decodeUrl : String
+	{
+		return self.removingPercentEncoding!
+	}
 }

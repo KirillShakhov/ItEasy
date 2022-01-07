@@ -330,13 +330,17 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="R0V-MB-RxT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="find" destination="eWd-Kl-Vv5" eventType="valueChanged" id="Qwh-vo-5X8"/>
+                                    <action selector="find" destination="eWd-Kl-Vv5" eventType="primaryActionTriggered" id="lcq-1s-5z4"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ije-XC-NOd">
                                 <rect key="frame" x="349" y="169" width="45" height="45"/>
@@ -405,7 +409,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Receipts" image="Save" id="KG7-tL-i43"/>
                     <connections>
+                        <outlet property="findField" destination="ibF-6X-NU1" id="9kb-rc-7vG"/>
                         <outlet property="recipeList" destination="Cp8-ii-hyf" id="8TB-Hf-h6n"/>
+                        <outlet property="recipeView" destination="tAw-gi-gTC" id="q15-Yq-PHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7X-YT-g4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
