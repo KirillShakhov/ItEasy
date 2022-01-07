@@ -14,6 +14,7 @@ class RecipeCell: UICollectionViewCell {
     @IBOutlet weak var kcal: UILabel!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
+	var imageURL:String?
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()

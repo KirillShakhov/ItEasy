@@ -72,17 +72,19 @@ extension RecieptViewController: UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
 		let recipe = recipes[indexPath.item]
-		
 		cell.title.text = recipe.name
 		cell.kcal.text = String(format: "%.1f", recipe.kcal)
-		cell.image.image = nil
-		cell.activityIndicator.isHidden = false
-		DispatchQueue.global().async {
-			if let data = try? Data(contentsOf: URL(string: recipe.image)!) {
-				if let image = UIImage(data: data) {
-					DispatchQueue.main.async {
-						cell.image.image = image
-						cell.activityIndicator.isHidden = true
+		if(cell.imageURL != recipe.image){
+			cell.image.image = nil
+			cell.imageURL = recipe.image
+			cell.activityIndicator.isHidden = false
+			DispatchQueue.global().async {
+				if let data = try? Data(contentsOf: URL(string: recipe.image)!) {
+					if let image = UIImage(data: data) {
+						DispatchQueue.main.async {
+							cell.image.image = image
+							cell.activityIndicator.isHidden = true
+						}
 					}
 				}
 			}

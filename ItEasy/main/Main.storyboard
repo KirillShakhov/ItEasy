@@ -52,8 +52,9 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUJ-Es-6Of" customClass="ShadowView" customModule="ItEasy" customModuleProvider="target">
                                 <rect key="frame" x="20" y="144" width="374" height="150"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="olive" translatesAutoresizingMaskIntoConstraints="NO" id="WUw-1l-mmq" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUw-1l-mmq" customClass="RecipeCardImage" customModule="ItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                        <color key="backgroundColor" red="0.81214490620000002" green="0.81214490620000002" blue="0.81214490620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -106,13 +107,18 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </visualEffectView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="260-0G-4Rw">
+                                        <rect key="frame" x="177" y="65" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="WUw-1l-mmq" secondAttribute="trailing" id="2rE-hO-qrI"/>
                                     <constraint firstItem="WUw-1l-mmq" firstAttribute="leading" secondItem="tUJ-Es-6Of" secondAttribute="leading" id="4w6-I6-q3X"/>
+                                    <constraint firstItem="260-0G-4Rw" firstAttribute="centerX" secondItem="tUJ-Es-6Of" secondAttribute="centerX" id="5CN-nf-YaP"/>
                                     <constraint firstAttribute="bottom" secondItem="zeq-nX-9Cn" secondAttribute="bottom" constant="20" id="6Jy-8r-mLy"/>
                                     <constraint firstAttribute="trailing" secondItem="zeq-nX-9Cn" secondAttribute="trailing" constant="20" id="J3h-L5-kk8"/>
+                                    <constraint firstItem="260-0G-4Rw" firstAttribute="centerY" secondItem="tUJ-Es-6Of" secondAttribute="centerY" id="Sam-jo-55B"/>
                                     <constraint firstItem="zeq-nX-9Cn" firstAttribute="leading" secondItem="tUJ-Es-6Of" secondAttribute="leading" constant="20" id="Vbd-EE-1fb"/>
                                     <constraint firstAttribute="height" constant="150" id="Xr9-Nw-D5U"/>
                                     <constraint firstAttribute="bottom" secondItem="WUw-1l-mmq" secondAttribute="bottom" id="crz-ZM-4il"/>
@@ -179,6 +185,10 @@
                         <color key="badgeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="260-0G-4Rw" id="voc-or-wlE"/>
+                        <outlet property="selectedMenuImage" destination="WUw-1l-mmq" id="bGO-rJ-ps0"/>
+                        <outlet property="selectedMenuLabel" destination="m9v-do-Zkr" id="o8b-W5-bYN"/>
+                        <outlet property="todayLabel" destination="yeO-k4-IVF" id="wv6-aC-eiy"/>
                         <outlet property="todayRecipes" destination="afj-uk-jLJ" id="woh-ZE-WGK"/>
                         <outlet property="usernameLabel" destination="3tW-e3-C7Z" id="6hK-L3-5es"/>
                     </connections>
@@ -498,11 +508,6 @@
             <point key="canvasLocation" x="3060.8695652173915" y="793.52678571428567"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="WUw-1l-mmq">
-            <size key="intrinsicContentSize" width="870" height="480"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Home" width="25.333333969116211" height="26.666666030883789"/>
         <image name="Save" width="32" height="32"/>
@@ -510,7 +515,6 @@
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="olive" width="870" height="480"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="slider.vertical.3" catalog="system" width="128" height="111"/>
         <systemColor name="labelColor">
