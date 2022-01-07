@@ -47,8 +47,9 @@ extension MenuList: UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let storyboard = UIStoryboard(name: "MenuCard", bundle: nil)
 		guard let vc = storyboard.instantiateViewController(identifier: "MenuCard") as? MenuCard else { return }
-		
-		
+		let menu = menus[indexPath.item]
+
+		vc.menu = menu
 		vc.modalPresentationStyle = .popover
 		present(vc, animated:true)
 	}
@@ -61,6 +62,7 @@ extension MenuList: UICollectionViewDelegate{
 		cell.menu = menu
 		cell.menuName.text = menu.name
 		cell.menuImage.image = nil
+		cell.activityIndicator.isHidden = false
 		DispatchQueue.global().async {
 			if let data = try? Data(contentsOf: URL(string: menu.image)!) {
 				if let image = UIImage(data: data) {

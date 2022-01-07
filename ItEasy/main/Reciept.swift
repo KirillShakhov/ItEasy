@@ -76,6 +76,7 @@ extension RecieptViewController: UICollectionViewDelegate{
 		cell.title.text = recipe.name
 		cell.kcal.text = String(format: "%.1f", recipe.kcal)
 		cell.image.image = nil
+		cell.activityIndicator.isHidden = false
 		DispatchQueue.global().async {
 			if let data = try? Data(contentsOf: URL(string: recipe.image)!) {
 				if let image = UIImage(data: data) {
