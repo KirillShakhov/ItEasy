@@ -96,13 +96,16 @@ class RecipeSteps: UIViewController {
 	}
     
 	@IBAction func goBack(_ sender: Any) {
-		count=count-1
-		updateStep()
-
+        if(count != 1) {
+            count=count-1
+            updateStep()
+        }
 	}
 	
 	@IBAction func goNext(_ sender: Any) {
-		count=count+1
-		updateStep()
+        if(count != recipe?.steps?.count) {
+            count=count+1
+            updateStep()
+        }
 	}
 }

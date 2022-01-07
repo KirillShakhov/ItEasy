@@ -148,6 +148,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="am3-s3-qKu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="am3-s3-qKu" firstAttribute="trailing" secondItem="tpd-FU-Z3N" secondAttribute="trailing" constant="20" id="0I9-AI-bUb"/>
                             <constraint firstItem="am3-s3-qKu" firstAttribute="trailing" secondItem="0kg-OB-BY2" secondAttribute="trailing" constant="20" id="4g6-aM-Wut"/>
@@ -163,6 +164,10 @@
                             <constraint firstItem="dHi-bB-zwA" firstAttribute="leading" secondItem="am3-s3-qKu" secondAttribute="leading" id="nj1-HH-ww3"/>
                             <constraint firstItem="Phw-nb-pR8" firstAttribute="leading" secondItem="am3-s3-qKu" secondAttribute="leading" id="qzl-E9-JBP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rwk-aY-VEY" appends="YES" id="4yg-uu-D0L"/>
+                            <outletCollection property="gestureRecognizers" destination="4bg-tX-H2h" appends="YES" id="9Nb-0a-c2g"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="hQO-hh-3m9" id="b0S-oR-PmZ"/>
@@ -176,6 +181,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpC-xH-Rel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="rwk-aY-VEY" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="goNext:" destination="03V-Qd-DfG" id="lPk-DH-ptd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4bg-tX-H2h" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="goBack:" destination="03V-Qd-DfG" id="DxM-RW-Vzv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3947.826086956522" y="1472.5446428571429"/>
         </scene>
