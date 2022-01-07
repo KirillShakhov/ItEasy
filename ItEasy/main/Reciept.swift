@@ -17,7 +17,7 @@ class RecieptViewController: UIViewController {
     @IBOutlet weak var findField: UITextField!
     
     
-	var recipes: [Recipes.Recipe] = []
+	var recipes: [RecipeModel.Recipe] = []
     
 
 	override func viewDidLoad() {
@@ -26,12 +26,12 @@ class RecieptViewController: UIViewController {
 		let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
 		recipeView.addGestureRecognizer(panGesture)
 	
-		self.recipeList.register(UINib(nibName: "RecieptCell", bundle: nil), forCellWithReuseIdentifier: "RecieptCell")
+		self.recipeList.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "RecipeCell")
 
 		self.recipeList.dataSource = self
 		self.recipeList.delegate = self
 		
-		recipes = Recipes.getRecipes()
+		recipes = RecipeModel.getRecipes()
 		
 		refreshControl.layer.zPosition = -1
 		recipeList.refreshControl = refreshControl
@@ -43,9 +43,9 @@ class RecieptViewController: UIViewController {
     }
 	@objc private func updateRecipes(_ sender: Any) {
 		if(findField.text == nil || findField.text == ""){
-			recipes = Recipes.getRecipes()
+			recipes = RecipeModel.getRecipes()
 		}else{
-			recipes = Recipes.getRecipes(find: findField.text!)
+			recipes = RecipeModel.getRecipes(find: findField.text!)
 		}
 		self.refreshControl.endRefreshing()
 		recipeList.reloadData()
@@ -70,7 +70,7 @@ class RecieptViewController: UIViewController {
 
 extension RecieptViewController: UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecieptCell", for: indexPath) as! RecieptCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
 		let recipe = recipes[indexPath.item]
 		
 		cell.title.text = recipe.name

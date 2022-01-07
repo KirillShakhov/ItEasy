@@ -1,5 +1,5 @@
 //
-//  Recipes.swift
+//  RecipeModel.swift
 //  ItEasy
 //
 //  Created by Кирилл Шахов on 07.01.2022.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Recipes{
+class RecipeModel{
 	
 	struct Recipe: Codable{
 		var id: Int

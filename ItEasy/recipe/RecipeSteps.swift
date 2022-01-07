@@ -19,7 +19,7 @@ class RecipeSteps: UIViewController {
     
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
-	var recipe: Recipes.Recipe?
+	var recipe: RecipeModel.Recipe?
 	
 	@IBOutlet weak var shadowImageView: ShadowView!
 	

@@ -21,11 +21,12 @@ class ActualGradientButton: UIButton {
 			updateColors()
 		}
 	}
+	@IBInspectable var cornerRadius: CGFloat = 15
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
 		gradientLayer.frame = bounds
-		layer.cornerRadius = 15
+		layer.cornerRadius = cornerRadius
 		layer.masksToBounds = true
 	}
 
@@ -35,7 +36,7 @@ class ActualGradientButton: UIButton {
 		l.colors = [firstColor.cgColor, secondColor.cgColor]
 		l.startPoint = CGPoint(x: 0, y: 0)
 		l.endPoint = CGPoint(x: 1, y: 1)
-		l.cornerRadius = 15
+		l.cornerRadius = cornerRadius
 		layer.insertSublayer(l, at: 0)
 		return l
 	}()
@@ -46,7 +47,7 @@ class ActualGradientButton: UIButton {
 		l.colors = [firstColor.cgColor, secondColor.cgColor]
 		l.startPoint = CGPoint(x: 0, y: 0)
 		l.endPoint = CGPoint(x: 3, y: 3)
-		l.cornerRadius = 15
+		l.cornerRadius = cornerRadius
 		layer.insertSublayer(l, at: 0)
 		l.frame.size = self.frame.size
 

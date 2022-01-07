@@ -18,7 +18,7 @@ class Home: UIViewController {
 			usernameLabel.text = username
 		}
 		
-		self.todayRecipes.register(UINib(nibName: "RecieptCell", bundle: nil), forCellWithReuseIdentifier: "RecieptCell")
+		self.todayRecipes.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "RecipeCell")
 
 		self.todayRecipes.dataSource = self
 		self.todayRecipes.delegate = self
@@ -46,7 +46,7 @@ class Home: UIViewController {
 
 extension Home: UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecieptCell", for: indexPath) as! RecieptCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
 		cell.image.image = UIImage(named: "olive")
 		cell.title.text = "Оливье"
 		cell.layer.shadowColor = UIColor.gray.cgColor

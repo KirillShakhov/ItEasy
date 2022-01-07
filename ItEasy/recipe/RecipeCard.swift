@@ -24,7 +24,7 @@ class RecipeCard: UIViewController {
 	
     
     
-	var recipe: Recipes.Recipe?
+	var recipe: RecipeModel.Recipe?
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class RecipeCard: UIViewController {
 		fats.text = String(format: "%.1f", recipe!.fats)+" гр"
 		carbohydrates.text = String(format: "%.1f", recipe!.carbohydrates)+" гр"
 
-		recipe = Recipes.getRecipeInfo(id: (recipe!.id))
+		recipe = RecipeModel.getRecipeInfo(id: (recipe!.id))
 		print()
 
 		print(recipe ?? "Null")

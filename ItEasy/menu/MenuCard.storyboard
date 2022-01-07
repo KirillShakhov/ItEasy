@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Card-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MenuCard" id="Y6W-OH-hqX" customClass="MenuCard" customModule="ItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-ag-H7X">
+                                <rect key="frame" x="0.0" y="258" width="414" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="QLx-4e-5L7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A92-9f-Hnf">
+                                    <size key="itemSize" width="414" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcW-V0-eMw">
+                                <rect key="frame" x="20" y="20" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="01m-Wc-k1z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWZ-N7-qmb">
+                                <rect key="frame" x="274" y="30" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.60392159219999997" green="0.76470589639999997" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="867-nc-2Xu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Pbd-FV-dMj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectMenu" destination="Y6W-OH-hqX" eventType="touchUpOutside" id="Y34-2S-91M"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tSH-f3-wRu">
+                                <rect key="frame" x="20" y="100" width="374" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RWZ-N7-qmb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="AQm-c0-9Sf"/>
+                            <constraint firstItem="2n6-ag-H7X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="B32-pV-fCm"/>
+                            <constraint firstItem="tSH-f3-wRu" firstAttribute="top" secondItem="vcW-V0-eMw" secondAttribute="bottom" constant="20" id="CTY-xs-ibe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tSH-f3-wRu" secondAttribute="trailing" constant="20" id="Cpy-CT-rFX"/>
+                            <constraint firstItem="2n6-ag-H7X" firstAttribute="top" secondItem="tSH-f3-wRu" secondAttribute="bottom" constant="20" id="LFi-Bt-L0O"/>
+                            <constraint firstItem="2n6-ag-H7X" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="NZE-0k-aU6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vcW-V0-eMw" secondAttribute="trailing" constant="20" id="SCk-pN-C4s"/>
+                            <constraint firstItem="2n6-ag-H7X" firstAttribute="centerX" secondItem="tSH-f3-wRu" secondAttribute="centerX" id="fMD-Zp-XG2"/>
+                            <constraint firstItem="vcW-V0-eMw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="pFI-Yr-AEu"/>
+                            <constraint firstItem="tSH-f3-wRu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uBe-7X-Gzv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RWZ-N7-qmb" secondAttribute="trailing" constant="20" id="vZR-8N-cFX"/>
+                            <constraint firstItem="vcW-V0-eMw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wE4-6l-8uT"/>
+                        </constraints>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="menuButtonSelect" destination="RWZ-N7-qmb" id="gae-pw-uns"/>
+                        <outlet property="menuDescription" destination="tSH-f3-wRu" id="KsM-nb-GyZ"/>
+                        <outlet property="menuList" destination="2n6-ag-H7X" id="hTg-h8-pUk"/>
+                        <outlet property="menuName" destination="vcW-V0-eMw" id="5SR-oZ-BzX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

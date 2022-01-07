@@ -262,7 +262,7 @@
         <!--Menu-->
         <scene sceneID="ZIN-Ur-Xws">
             <objects>
-                <viewController id="EQs-2S-gKP" userLabel="Menu" sceneMemberID="viewController">
+                <viewController id="EQs-2S-gKP" userLabel="Menu" customClass="MenuList" customModule="ItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sCX-mW-Wp4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,14 +276,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-3K-XCf">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-3K-XCf" customClass="MenuListViewFlowLayout" customModule="ItEasy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="159" width="414" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NWM-3C-UIV">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NWM-3C-UIV">
+                                    <size key="itemSize" width="414" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -301,6 +301,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="doc.fill" catalog="system" id="EkL-ws-PLc"/>
+                    <connections>
+                        <outlet property="menuList" destination="ti6-3K-XCf" id="vpa-l0-vXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vso-Qe-vn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
