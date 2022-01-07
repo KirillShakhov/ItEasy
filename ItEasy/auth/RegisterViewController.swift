@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
 			let password = passField.text!
 
 			var result = Sender.querySyncPostJSON(path: "/users", json: json_req)
-			let json = result.body!.data(using: .utf8)!
+			var json = result.body!.data(using: .utf8)!
 			let decoder = JSONDecoder()
 			struct Request: Codable {
 				var success: Bool?
@@ -56,22 +56,29 @@ class RegisterViewController: UIViewController {
 			let req = try decoder.decode(Request.self, from: json)
 			if req.success == true {
 				let json_req: [String: Any] = ["username": username,
-										   "password": password]
+											   "password": password]
+				print(username)
+				print(password)
 				result = Sender.querySyncPostJSON(path: "/signin", json: json_req);
 				struct Request: Codable {
 					var accessToken: String?
 				}
-			
+				json = result.body!.data(using: .utf8)!
 				let req = try decoder.decode(Request.self, from: json)
 				if req.accessToken != nil {
 					let defaults = UserDefaults.standard
 					defaults.set("Bearer "+req.accessToken!, forKey: "token")
-					print("Bearer "+req.accessToken!)
+					defaults.set(loginField.text, forKey: "username")
+					let storyboard = UIStoryboard(name: "Main", bundle: nil)
+					let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
+					vc.modalPresentationStyle = .fullScreen
+					present(vc, animated: true, completion: nil)
 				}
-				let storyboard = UIStoryboard(name: "Main", bundle: nil)
-				let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
-				vc.modalPresentationStyle = .fullScreen
-				present(vc, animated: true, completion: nil)
+				else{
+					let alert = UIAlertController(title: "Регистрация", message: "Неправильные данные", preferredStyle: .alert)
+					alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
+					self.present(alert, animated: true)
+				}
 			}
 			else{
 				let alert = UIAlertController(title: "Регистрация", message: req.error, preferredStyle: .alert)

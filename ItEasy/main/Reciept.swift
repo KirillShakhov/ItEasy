@@ -37,10 +37,8 @@ class RecieptViewController: UIViewController {
     }
 	@objc private func updateRecipes(_ sender: Any) {
 		recipes = Recipes.getRecipes()
-		recipeList.reloadData()
-//		self.recipeList.update
 		self.refreshControl.endRefreshing()
-//		self.activityIndicatorView.stopAnimating()
+		recipeList.reloadData()
 		print("Updated")
 	}
 }

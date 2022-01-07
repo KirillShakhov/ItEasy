@@ -31,17 +31,17 @@ class LoginViewController: UIViewController {
 			if req.accessToken != nil {
 				let defaults = UserDefaults.standard
 				defaults.set("Bearer "+req.accessToken!, forKey: "token")
+				defaults.set(loginField.text, forKey: "username")
 				print("Bearer "+req.accessToken!)
 				let storyboard = UIStoryboard(name: "Main", bundle: nil)
 				let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as UIViewController
 				vc.modalPresentationStyle = .fullScreen
 				present(vc, animated: true, completion: nil)
-				
-//				else{
-//					let alert = UIAlertController(title: "Авторизация", message: product.message, preferredStyle: .alert)
-//					alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
-//					self.present(alert, animated: true)
-//				}
+			}
+			else{
+				let alert = UIAlertController(title: "Авторизация", message: "Неправильный логин или пароль", preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Закрыть", style: .cancel, handler: nil))
+				self.present(alert, animated: true)
 			}
 		}
 		catch{

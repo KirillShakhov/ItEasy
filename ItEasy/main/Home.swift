@@ -28,7 +28,7 @@ class Home: UIViewController {
     @IBAction func logout(_ sender: Any) {
 		let defaults = UserDefaults.standard
 		defaults.removeObject(forKey: "username")
-		defaults.removeObject(forKey: "pass")
+		defaults.removeObject(forKey: "token")
 		dismiss(animated: true)
     }
     
@@ -47,8 +47,8 @@ class Home: UIViewController {
 extension Home: UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecieptCell", for: indexPath) as! RecieptCell
-		cell.image.image = RecipeModel.getLocationImages()[indexPath.item]
-		cell.title.text = RecipeModel.getLocationNames()[indexPath.item]
+		cell.image.image = UIImage(named: "olive")
+		cell.title.text = "Оливье"
 		cell.layer.shadowColor = UIColor.gray.cgColor
 		cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
 		cell.layer.shadowRadius = 5.0
