@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
 			let json_req: [String: Any] = ["username": loginField.text!,
 									   "password": passField.text!]
 
-			let result = Sender.querySyncPostJSON(address: "http://127.0.0.1:8090/signin", json: json_req);
+			let result = Sender.querySyncPostJSON(path: "/signin", json: json_req);
 			print(result)
 			
 			let json = result.body!.data(using: .utf8)!

@@ -19,29 +19,90 @@ class RecipeSteps: UIViewController {
     
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
-    @IBAction func goBack(_ sender: Any) {
-        
-    }
-    
-    @IBAction func goNext(_ sender: Any) {
-        
-    }
+	var recipe: Recipes.Recipe?
+	
+	@IBOutlet weak var shadowImageView: ShadowView!
+	
+	var count = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		updateStep()
     }
+	
+	func updateStep(){
+		if(recipe != nil && recipe?.steps != nil){
+			if(recipe!.steps!.count>0){
+				if(count == 1) {
+					backButton.isHidden = true
+				}
+				else{
+					backButton.isHidden = false
+				}
+				if(count == recipe?.steps?.count) {
+					nextButton.isHidden = true
+				}
+				else{
+					nextButton.isHidden = false
+				}
+				currentStep.text = String(count)
+				allSteps.text = String(recipe!.steps!.count)
+				
+				let index = self.count-1
+				stepText.text = recipe!.steps![index].text
+				if(self.recipe?.steps![index].image != nil && self.recipe?.steps![index].image != ""){
+					self.activityIndicator.isHidden = false
+					self.shadowImageView.isHidden = false
+					self.stepImage.image = nil
+					DispatchQueue.global().async {
+							if let data = try? Data(contentsOf: URL(string: self.recipe!.steps![index].image!)!) {
+								if let image = UIImage(data: data) {
+									DispatchQueue.main.async {
+										self.stepImage.image = image
+										self.activityIndicator.isHidden = true
+										self.shadowImageView.isHidden = false
+									}
+								}
+							}
+						
+					}
+				}
+				else{
+					self.shadowImageView.isHidden = true
+				}
+				
+			}
+			else{
+				stepText.text = "Нет данных"
+				shadowImageView.isHidden = true
+				backButton.isHidden = true
+				nextButton.isHidden = true
+				currentStep.text = "0"
+				allSteps.text = "0"
+			}
+		}
+		else{
+			stepText.text = "Нет данных"
+			shadowImageView.isHidden = true
+			backButton.isHidden = true
+			nextButton.isHidden = true
+			currentStep.text = "0"
+			allSteps.text = "0"
+		}
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		
+	}
     
+	@IBAction func goBack(_ sender: Any) {
+		count=count-1
+		updateStep()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	}
+	
+	@IBAction func goNext(_ sender: Any) {
+		count=count+1
+		updateStep()
+	}
 }

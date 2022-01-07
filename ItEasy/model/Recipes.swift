@@ -24,7 +24,7 @@ class Recipes{
 		var ingredients: [Ingredients]?
 	}
 	struct RecipeStep: Codable{
-		var image:String
+		var image:String?
 		var text:String
 	}
 	struct Ingredients: Codable{
@@ -37,7 +37,7 @@ class Recipes{
 
 	static func getRecipes() -> [Recipe]{
 		do{
-			let res = Sender.querySyncGet(address: "http://127.0.0.1:8090/recipes")
+			let res = Sender.querySyncGet(path: "/recipes")
 			let json = res.body!.data(using: .utf8)!
 			let decoder = JSONDecoder()
 			struct Response: Codable {
@@ -59,9 +59,7 @@ class Recipes{
 	}
 	static func getRecipeInfo(id: Int) -> Recipe?{
 		do{
-			let res = Sender.querySyncGet(address: "http://127.0.0.1:8090/recipes/info?id="+String(id))
-			print("http://127.0.0.1:8090/recipes/info?id="+String(id))
-			print(res)
+			let res = Sender.querySyncGet(path: "/recipes/info?id="+String(id))
 			let json = res.body!.data(using: .utf8)!
 			let decoder = JSONDecoder()
 			struct Response: Codable {

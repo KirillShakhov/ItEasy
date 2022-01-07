@@ -18,7 +18,7 @@ class LoadingAuthViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		let defaults = UserDefaults.standard
 		if defaults.string(forKey: "token") != nil {
-			let result = Sender.querySyncGetJSON(address: "http://127.0.0.1:8090/users")
+			let result = Sender.querySyncGetJSON(path: "/users")
 			print(result)
 			if(result.code == 200) {
 				goToView(name: "Main", withIdentifier: "MainViewController")

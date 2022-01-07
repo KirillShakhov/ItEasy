@@ -35,7 +35,7 @@ class Sender{
 	}
 	
 	
-	static func querySyncJSON(address: String, json: [String: Any]?, method: String) -> Response {
+	static func querySyncJSON(address: String = "http://109.107.181.107:8090", path: String, json: [String: Any]?, method: String) -> Response {
 		let semaphore = DispatchSemaphore(value: 0)
 		// prepare json data
 
@@ -45,7 +45,7 @@ class Sender{
 		
 
 		// create post request
-		let url = URL(string: address)!
+		let url = URL(string: address+path)!
 		var request = URLRequest(url: url)
 		request.httpMethod = method
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -92,23 +92,23 @@ class Sender{
 		semaphore.wait()
 		return res
 	}
-	static func querySyncPostJSON(address: String, json: [String: Any]) -> Response {
-		return querySyncJSON(address: address, json: json, method: "POST")
+	static func querySyncPostJSON(path: String, json: [String: Any]) -> Response {
+		return querySyncJSON(path: path, json: json, method: "POST")
 	}
-	static func querySyncGetJSON(address: String, json: [String: Any]) -> Response {
-		return querySyncJSON(address: address, json: json, method: "GET")
+	static func querySyncGetJSON(path: String, json: [String: Any]) -> Response {
+		return querySyncJSON(path: path, json: json, method: "GET")
 	}
-	static func querySyncPostJSON(address: String) -> Response {
-		return querySyncJSON(address: address, json: nil, method: "POST")
+	static func querySyncPostJSON(path: String) -> Response {
+		return querySyncJSON(path: path, json: nil, method: "POST")
 	}
-	static func querySyncGetJSON(address: String) -> Response {
-		return querySyncJSON(address: address, json: nil, method: "GET")
+	static func querySyncGetJSON(path: String) -> Response {
+		return querySyncJSON(path: path, json: nil, method: "GET")
 	}
-	static func querySyncPost(address: String) -> Response {
-		return querySyncJSON(address: address, json: nil, method: "POST")
+	static func querySyncPost(path: String) -> Response {
+		return querySyncJSON(path: path, json: nil, method: "POST")
 	}
-	static func querySyncGet(address: String) -> Response {
-		return querySyncJSON(address: address, json: nil, method: "GET")
+	static func querySyncGet(path: String) -> Response {
+		return querySyncJSON(path: path, json: nil, method: "GET")
 	}
 //	static func query(address: String) -> String {
 //		return querySync(address: address)

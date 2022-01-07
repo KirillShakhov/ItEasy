@@ -22,6 +22,8 @@ class RecipeCard: UIViewController {
     
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
+    
+    
 	var recipe: Recipes.Recipe?
     
 	override func viewDidLoad() {
@@ -63,6 +65,14 @@ class RecipeCard: UIViewController {
 		self.dismiss(animated: true, completion: nil)
 	}
 
+    @IBAction func cook(_ sender: Any) {
+		let storyboard = UIStoryboard(name: "RecipeSteps", bundle: nil)
+		guard let vc = storyboard.instantiateViewController(identifier: "RecipeSteps") as? RecipeSteps else { return }
+		vc.recipe = recipe
+		vc.modalPresentationStyle = .popover
+		present(vc, animated:true)
+
+    }
 }
 
 

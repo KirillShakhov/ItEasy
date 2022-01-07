@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
 			let username = loginField.text!
 			let password = passField.text!
 
-			var result = Sender.querySyncPostJSON(address: "http://127.0.0.1:8090/users", json: json_req)
+			var result = Sender.querySyncPostJSON(path: "/users", json: json_req)
 			let json = result.body!.data(using: .utf8)!
 			let decoder = JSONDecoder()
 			struct Request: Codable {
@@ -57,7 +57,7 @@ class RegisterViewController: UIViewController {
 			if req.success == true {
 				let json_req: [String: Any] = ["username": username,
 										   "password": password]
-				result = Sender.querySyncPostJSON(address: "http://127.0.0.1:8090/signin", json: json_req);
+				result = Sender.querySyncPostJSON(path: "/signin", json: json_req);
 				struct Request: Codable {
 					var accessToken: String?
 				}
