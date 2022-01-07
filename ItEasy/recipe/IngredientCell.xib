@@ -10,58 +10,61 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" id="KGk-i7-Jjw" customClass="IngredientCell" customModule="ItEasy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-EP-Pdc">
-                        <rect key="frame" x="274" y="0.0" width="46" height="46"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgA-ml-HEs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag1-Xe-IwM">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="bD4-4K-p6U"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="fYO-q3-I4M"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="jwU-du-AfW"/>
+                                    <constraint firstAttribute="height" constant="46" id="sTs-Wl-AhO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" large potatoes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGa-7c-eqj" customClass="IngredientCell">
+                                <rect key="frame" x="46" y="0.0" width="244" height="46"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-EP-Pdc">
+                                <rect key="frame" x="290" y="0.0" width="10" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="CWC-ma-xCn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="46" id="CWC-ma-xCn"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="L1A-Dw-mqW"/>
+                            <constraint firstItem="ag1-Xe-IwM" firstAttribute="leading" secondItem="TgA-ml-HEs" secondAttribute="leading" id="LTV-yz-YPL"/>
+                            <constraint firstItem="BGa-7c-eqj" firstAttribute="leading" secondItem="ag1-Xe-IwM" secondAttribute="trailing" id="YUR-rR-EAa"/>
+                            <constraint firstAttribute="trailing" secondItem="eHX-EP-Pdc" secondAttribute="trailing" constant="20" id="ZiM-Da-RYP"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag1-Xe-IwM">
-                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="46" id="bD4-4K-p6U"/>
-                            <constraint firstAttribute="height" constant="46" id="sTs-Wl-AhO"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title=""/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" large potatoes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGa-7c-eqj" customClass="IngredientCell">
-                        <rect key="frame" x="46" y="0.0" width="228" height="46"/>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BGa-7c-eqj" secondAttribute="bottom" id="0vn-yF-3Bd"/>
-                    <constraint firstItem="eHX-EP-Pdc" firstAttribute="leading" secondItem="BGa-7c-eqj" secondAttribute="trailing" id="3nU-ir-k3k"/>
-                    <constraint firstItem="BGa-7c-eqj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4MP-kW-XfU"/>
-                    <constraint firstAttribute="bottom" secondItem="eHX-EP-Pdc" secondAttribute="bottom" id="4j7-aS-XXE"/>
-                    <constraint firstAttribute="bottom" secondItem="eHX-EP-Pdc" secondAttribute="bottom" id="61l-rf-ICG"/>
-                    <constraint firstItem="ag1-Xe-IwM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6ef-l0-5bh"/>
-                    <constraint firstItem="eHX-EP-Pdc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9uc-ef-otH"/>
-                    <constraint firstItem="eHX-EP-Pdc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RO1-8W-9lJ"/>
-                    <constraint firstAttribute="bottom" secondItem="ag1-Xe-IwM" secondAttribute="bottom" id="Xyx-Nv-emb"/>
-                    <constraint firstItem="BGa-7c-eqj" firstAttribute="leading" secondItem="ag1-Xe-IwM" secondAttribute="trailing" id="Y05-mS-Nry"/>
-                    <constraint firstItem="ag1-Xe-IwM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eIU-Yo-MZA"/>
-                    <constraint firstAttribute="trailing" secondItem="eHX-EP-Pdc" secondAttribute="trailing" id="wem-rj-pGF"/>
-                    <constraint firstAttribute="trailing" secondItem="eHX-EP-Pdc" secondAttribute="trailing" id="zs3-XV-fCd"/>
+                    <constraint firstItem="TgA-ml-HEs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8NR-rC-1fy"/>
+                    <constraint firstAttribute="trailing" secondItem="TgA-ml-HEs" secondAttribute="trailing" id="LJY-uM-LBe"/>
+                    <constraint firstItem="TgA-ml-HEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZIx-gv-KJM"/>
+                    <constraint firstAttribute="bottom" secondItem="TgA-ml-HEs" secondAttribute="bottom" id="gl1-CA-QFU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="ingredientCount" destination="eHX-EP-Pdc" id="UsP-2Y-ERl"/>
-                <outlet property="ingredientName" destination="BGa-7c-eqj" id="rrS-VG-jA1"/>
+                <outlet property="ingredientName" destination="BGa-7c-eqj" id="b0Q-99-eqH"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
         </tableViewCell>

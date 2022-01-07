@@ -9,11 +9,14 @@ import UIKit
 
 
 class RecieptViewController: UIViewController {
+	private let refreshControl = UIRefreshControl()
+
     @IBOutlet weak var recipeList: UICollectionView!
 	
 	var recipes: [Recipes.Recipe] = []
     
-    override func viewDidLoad() {
+
+	override func viewDidLoad() {
         super.viewDidLoad()
 		
 	
@@ -23,10 +26,22 @@ class RecieptViewController: UIViewController {
 		self.recipeList.delegate = self
 		
 		recipes = Recipes.getRecipes()
-		print(recipes)
 		
-        // Do any additional setup after loading the view.
+		refreshControl.layer.zPosition = -1
+		recipeList.refreshControl = refreshControl
+		refreshControl.addTarget(self, action: #selector(updateRecipes(_:)), for: .valueChanged)
+		
+		refreshControl.tintColor = UIColor(red:0.25, green:0.85, blue:0.25, alpha:0.6)
+		refreshControl.attributedTitle = NSAttributedString(string: "Update Recipes ...")
+
     }
+	@objc private func updateRecipes(_ sender: Any) {
+		recipes = Recipes.getRecipes()
+//		self.recipeList.update
+		self.refreshControl.endRefreshing()
+//		self.activityIndicatorView.stopAnimating()
+		print("Updated")
+	}
 }
 
 extension RecieptViewController: UICollectionViewDelegate{
@@ -35,7 +50,7 @@ extension RecieptViewController: UICollectionViewDelegate{
 		let recipe = recipes[indexPath.item]
 		
 		cell.title.text = recipe.name
-		cell.kcal.text = String(format: "%f", recipe.kcal)
+		cell.kcal.text = String(format: "%.1f", recipe.kcal)
 		DispatchQueue.global().async {
 			if let data = try? Data(contentsOf: URL(string: recipe.image)!) {
 				if let image = UIImage(data: data) {
@@ -60,7 +75,6 @@ extension RecieptViewController: UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return recipes.count
 	}
-	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let recipe = recipes[indexPath.item]
 		

@@ -8,13 +8,9 @@
 import UIKit
 
 class IngredientCell: UITableViewCell {
-
-    
-    @IBOutlet weak var ingredientName: IngredientCell!
     @IBOutlet weak var ingredientCount: UILabel!
-    
-    
-    
+	@IBOutlet weak var ingredientName: UILabel!
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

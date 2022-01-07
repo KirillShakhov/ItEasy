@@ -29,22 +29,26 @@ class RecipeCard: UIViewController {
 		
         ingredientTable.dataSource = self
         ingredientTable.delegate = self
-        
-        
-		cardTitle.text = recipe?.name
-		kcal.text = String(format: "%f", recipe!.kcal)
-		cookingTime.text = recipe?.cookingTime
-		proteins.text = String(format: "%f", recipe!.proteins)
-		fats.text = String(format: "%f", recipe!.fats)
-		carbohydrates.text = String(format: "%f", recipe!.carbohydrates)
 
-		
-		DispatchQueue.global().async {
-			if let data = try? Data(contentsOf: URL(string: self.recipe!.image)!) {
-				if let image = UIImage(data: data) {
-					DispatchQueue.main.async {
-						self.cardImage.image = image
-						self.activityIndicator.isHidden = true
+		cardTitle.text = recipe?.name
+		kcal.text = String(format: "%.1f", recipe!.kcal)
+		cookingTime.text = recipe?.cookingTime
+		proteins.text = String(format: "%.1f", recipe!.proteins)+" гр"
+		fats.text = String(format: "%.1f", recipe!.fats)+" гр"
+		carbohydrates.text = String(format: "%.1f", recipe!.carbohydrates)+" гр"
+
+		recipe = Recipes.getRecipeInfo(id: (recipe!.id))
+		print()
+
+		print(recipe ?? "Null")
+		if(recipe != nil){
+			DispatchQueue.global().async {
+				if let data = try? Data(contentsOf: URL(string: self.recipe?.image ?? "")!) {
+					if let image = UIImage(data: data) {
+						DispatchQueue.main.async {
+							self.cardImage.image = image
+							self.activityIndicator.isHidden = true
+						}
 					}
 				}
 			}
@@ -70,11 +74,13 @@ extension RecipeCard: UITableViewDelegate{
 
 extension RecipeCard: UITableViewDataSource{
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return recipe?.ingredients?.count ?? 0
 	}
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ingredientTable.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath)
+        let cell = ingredientTable.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientCell
+		cell.ingredientName.text = recipe!.ingredients![indexPath.item].product.name
+		cell.ingredientCount.text = recipe!.ingredients![indexPath.item].count
 		return cell
     }
 }
