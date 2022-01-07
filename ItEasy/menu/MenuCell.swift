@@ -15,15 +15,14 @@ class MenuCell: UICollectionViewCell {
     @IBOutlet weak var menuName: UILabel!
     @IBOutlet weak var menuSelectButton: UIButton!
 	
-	var menuList: MenuList!
-
 	var menu: MenuModel.Menu?
 	
+	var menuList: MenuList?
+	var imageURL:String?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-		
         selectButton.layer.cornerRadius = 10
-		
     }
     @IBAction func selectMenu(_ sender: Any) {
 		print("click")
@@ -31,7 +30,7 @@ class MenuCell: UICollectionViewCell {
 			if(MenuList.selectMenu(id: menu!.id)){
                 selectButton.setTitle("Selected", for: .normal)
                 selectButton.backgroundColor = UIColor.clear
-				menuList.updateMenus(self)
+				menuList?.updateMenus(self)
 			}else{
 				print("Не выбрано")
 			}

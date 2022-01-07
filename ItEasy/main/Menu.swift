@@ -73,22 +73,27 @@ extension MenuList: UICollectionViewDelegate{
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCell
 		let menu = menus[indexPath.item]
-		cell.menu = menu
 		cell.menuList = self
 		cell.menuName.text = menu.name
-		cell.menuImage.image = nil
-		cell.activityIndicator.isHidden = false
-		
-		DispatchQueue.global().async {
-			if let data = try? Data(contentsOf: URL(string: menu.image)!) {
-				if let image = UIImage(data: data) {
-					DispatchQueue.main.async {
-						cell.menuImage.image = image
-						cell.activityIndicator.isHidden = true
+		print("///////////////")
+		print(cell.imageURL ?? "nil")
+		print(menu.image)
+		if(cell.imageURL != menu.image){
+			cell.activityIndicator.isHidden = false
+			cell.menuImage.image = nil
+			cell.imageURL = menu.image
+			DispatchQueue.global().async {
+				if let data = try? Data(contentsOf: URL(string: menu.image)!) {
+					if let image = UIImage(data: data) {
+						DispatchQueue.main.async {
+							cell.menuImage.image = image
+							cell.activityIndicator.isHidden = true
+						}
 					}
 				}
 			}
 		}
+		cell.menu = menu
 		if(menu.id == selectMenuId){
 			cell.selectButton.setTitle("Selected", for: .normal)
 			cell.selectButton.backgroundColor = UIColor.clear
