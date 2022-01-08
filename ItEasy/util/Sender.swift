@@ -35,7 +35,7 @@ class Sender{
 	}
 	
 	//http://109.107.181.107:8090
-	static func querySyncJSON(address: String = "http://127.0.0.1:8090", path: String, json: [String: Any]?, method: String) -> Response {
+	static func querySyncJSON(address: String = "http://109.107.181.107:8090", path: String, json: [String: Any]?, method: String) -> Response {
 		let semaphore = DispatchSemaphore(value: 0)
 		// prepare json data
 

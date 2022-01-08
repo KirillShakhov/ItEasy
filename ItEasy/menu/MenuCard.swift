@@ -13,6 +13,8 @@ class MenuCard: UIViewController {
     @IBOutlet weak var menuDescription: UITextView!
     @IBOutlet weak var menuButtonSelect: UIButton!
 	
+	var menuView: MenuList?
+
 	var menu: MenuModel.Menu?
 	
 	private var recipes = [RecipeModel.Recipe]()
@@ -49,6 +51,15 @@ class MenuCard: UIViewController {
 		if(menu != nil){
 			if(MenuList.selectMenu(id: menu!.id)){
 				menuList.reloadData()
+			}else{
+				print("Не выбрано")
+			}
+		}
+		if(menu != nil){
+			if(MenuList.selectMenu(id: menu!.id)){
+				menuButtonSelect.setTitle("Selected", for: .normal)
+				menuButtonSelect.backgroundColor = UIColor.clear
+				menuView?.updateMenus(self)
 			}else{
 				print("Не выбрано")
 			}

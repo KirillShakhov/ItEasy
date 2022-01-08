@@ -28,7 +28,7 @@
 		ED5868682784F17F0092C0B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */; };
 		EDA02FCD27874D4F00BB5BBE /* GroceryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */; };
 		EDA02FCE27874D4F00BB5BBE /* GroceryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */; };
-		EDA02FD22787550500BB5BBE /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FD12787550500BB5BBE /* GroceryList.swift */; };
+		EDA02FD22787550500BB5BBE /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FD12787550500BB5BBE /* Grocery.swift */; };
 		EDA02FD52787A11800BB5BBE /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA02FD42787A11800BB5BBE /* RecipeModel.swift */; };
 		EDA02FD92787C6F400BB5BBE /* RecipeSteps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA02FD82787C6F400BB5BBE /* RecipeSteps.storyboard */; };
 		EDA5754C2783B8B800942E60 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5754B2783B8B800942E60 /* FilterViewController.swift */; };
@@ -94,7 +94,7 @@
 		ED58685F2784F17F0092C0B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EDA02FCB27874D4F00BB5BBE /* GroceryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListCell.swift; sourceTree = "<group>"; };
 		EDA02FCC27874D4F00BB5BBE /* GroceryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryListCell.xib; sourceTree = "<group>"; };
-		EDA02FD12787550500BB5BBE /* GroceryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
+		EDA02FD12787550500BB5BBE /* Grocery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
 		EDA02FD42787A11800BB5BBE /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		EDA02FD82787C6F400BB5BBE /* RecipeSteps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeSteps.storyboard; sourceTree = "<group>"; };
 		EDA5754B2783B8B800942E60 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 				ED152A1C278296A2008D73AC /* Main.storyboard */,
 				EDA575512783CF0400942E60 /* Reciept.swift */,
 				ED5460BC278623670044BE04 /* Home.swift */,
-				EDA02FD12787550500BB5BBE /* GroceryList.swift */,
+				EDA02FD12787550500BB5BBE /* Grocery.swift */,
 				EDC5347C2787E1A000A3FE77 /* Menu.swift */,
 			);
 			path = main;
@@ -219,9 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				EDA02FD32787A10800BB5BBE /* model */,
+				ED8EC181278501FD00420527 /* main */,
 				EDC534772787E14400A3FE77 /* menu */,
 				EDA02FCA27874D2700BB5BBE /* grocery */,
-				ED8EC181278501FD00420527 /* main */,
 				EDF8D0BA2783E2EF009887D0 /* recipe */,
 				ED5868552784F17F0092C0B5 /* auth */,
 				EDF8D0C32784A9E1009887D0 /* util */,
@@ -444,7 +444,7 @@
 			files = (
 				ED58684E2784C00D0092C0B5 /* CheckBox.swift in Sources */,
 				ED5460C1278643EB0044BE04 /* LoadingAuthViewController.swift in Sources */,
-				EDA02FD22787550500BB5BBE /* GroceryList.swift in Sources */,
+				EDA02FD22787550500BB5BBE /* Grocery.swift in Sources */,
 				EDBB020727824E780052A190 /* ActualGradientButton.swift in Sources */,
 				ED5868662784F17F0092C0B5 /* LoginViewController.swift in Sources */,
 				ED5460BF278627830044BE04 /* Sender.swift in Sources */,

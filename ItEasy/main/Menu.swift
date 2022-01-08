@@ -44,12 +44,7 @@ class MenuList: UIViewController {
 	}
 	
 	static func selectMenu(id:Int) -> Bool{
-		if(MenuModel.setSelectedMenu(id: id)){
-			return true
-		}
-		else{
-			return false
-		}
+		return MenuModel.setSelectedMenu(id: id)
 	}
 
 }
@@ -63,6 +58,7 @@ extension MenuList: UICollectionViewDataSource{
 		guard let vc = storyboard.instantiateViewController(identifier: "MenuCard") as? MenuCard else { return }
 		let menu = menus[indexPath.item]
 		vc.selectMenuId = selectMenuId
+		vc.menuView = self
 		vc.menu = menu
 		vc.modalPresentationStyle = .popover
 		present(vc, animated:true)
@@ -75,9 +71,6 @@ extension MenuList: UICollectionViewDelegate{
 		let menu = menus[indexPath.item]
 		cell.menuList = self
 		cell.menuName.text = menu.name
-		print("///////////////")
-		print(cell.imageURL ?? "nil")
-		print(menu.image)
 		if(cell.imageURL != menu.image){
 			cell.activityIndicator.isHidden = false
 			cell.menuImage.image = nil

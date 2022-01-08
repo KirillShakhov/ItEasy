@@ -55,6 +55,7 @@ class GroceryList: UIViewController {
 						return
 				}
 				print(recipes)
+				ingridients = []
 				for i in recipes{
 					ingridients.append(contentsOf: RecipeModel.getRecipeInfo(id: i.id)?.ingredients ?? [])
 				}
