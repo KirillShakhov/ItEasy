@@ -20,6 +20,10 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailField.delegate = self
+        self.passField.delegate = self
+        self.loginField.delegate = self
+
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
         slideIdicator.roundCorners(.allCorners, radius: 10)
@@ -34,7 +38,7 @@ class RegisterViewController: UIViewController {
 	}
 	
     
-    @IBAction func register(_ sender: UIButton) {
+    @IBAction func register(_ sender: Any) {
 		do{
 			let json_req: [String: Any] = [
 				"name": loginField.text!,
@@ -147,4 +151,26 @@ class RegisterViewController: UIViewController {
 	  // move back the root view origin to zero
 		self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 700)
 	}
+}
+
+extension RegisterViewController:UITextFieldDelegate{
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool
+		{
+			switch textField
+			{
+			case self.loginField:
+				self.emailField.becomeFirstResponder()
+				break
+			case self.emailField:
+				self.passField.becomeFirstResponder()
+				break
+			case self.passField:
+				dismissKeyboard()
+				self.register(self)
+				break
+			default:
+				textField.resignFirstResponder()
+			}
+			return true
+		}
 }

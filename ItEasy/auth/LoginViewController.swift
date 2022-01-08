@@ -77,7 +77,8 @@ class LoginViewController: UIViewController {
         
         slideIdicator.roundCorners(.allCorners, radius: 10)
 		
-		
+		loginField.delegate = self
+		passField.delegate = self
 	
 		 let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 		view.addGestureRecognizer(tap)
@@ -135,4 +136,23 @@ class LoginViewController: UIViewController {
 	@objc func keyboardWillHide(notification: NSNotification) {
 		self.view.frame.origin.y = (self.pointOrigin ?? CGPoint(x: 0, y: 700)).y
 	}
+}
+
+extension LoginViewController:UITextFieldDelegate{
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool
+		{
+			switch textField
+			{
+			case self.loginField:
+				self.passField.becomeFirstResponder()
+				break
+			case self.passField:
+				dismissKeyboard()
+				self.login(self)
+				break
+			default:
+				textField.resignFirstResponder()
+			}
+			return true
+		}
 }

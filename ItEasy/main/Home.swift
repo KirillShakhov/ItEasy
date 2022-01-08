@@ -40,7 +40,7 @@ class Home: UIViewController {
 	
 	func updateMenu(){
         let id = MenuModel.getSelectedMenu()
-			if(id != nil){
+		if(id != nil && id != -1){
 			menu = MenuModel.getMenuInfo(id: id!)
 			switch Date().dayNumberOfWeek()!{
 				case 1:
@@ -83,20 +83,49 @@ class Home: UIViewController {
 			}
 			todayRecipes.reloadData()
 			selectedMenuLabel.text = menu?.name
-				if(menuImageURL != menu?.image){
-				selectedMenuImage.image = nil
-				activityIndicator.isHidden = false
-				menuImageURL = menu?.image
-				DispatchQueue.global().async {
-					if let data = try? Data(contentsOf: URL(string: self.menu!.image)!) {
-						if let image = UIImage(data: data) {
-							DispatchQueue.main.async {
-								self.selectedMenuImage.image = image
-								self.activityIndicator.isHidden = true
+			if(menuImageURL != menu?.image){
+					selectedMenuImage.image = nil
+					activityIndicator.isHidden = false
+					menuImageURL = menu?.image
+					DispatchQueue.global().async {
+						if let data = try? Data(contentsOf: URL(string: self.menu!.image)!) {
+							if let image = UIImage(data: data) {
+								DispatchQueue.main.async {
+									self.selectedMenuImage.image = image
+									self.activityIndicator.isHidden = true
 							}
 						}
 					}
 				}
+			}
+		}
+		else{
+			self.selectedMenuLabel.text = "Меню не выбрано"
+			self.activityIndicator.isHidden = true
+			switch Date().dayNumberOfWeek()!{
+				case 1:
+					todayLabel.text = "Sunday"
+					break
+				case 2:
+					todayLabel.text = "Monday"
+					break
+				case 3:
+					todayLabel.text = "Tuesday"
+					break
+				case 4:
+					todayLabel.text = "Wednesday"
+					break
+				case 5:
+					todayLabel.text = "Thursday"
+					break
+				case 6:
+					todayLabel.text = "Friday"
+					break
+				case 7:
+					todayLabel.text = "Saturday"
+					break
+				default:
+					return
 			}
 		}
 	}

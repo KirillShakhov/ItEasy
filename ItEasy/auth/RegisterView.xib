@@ -45,7 +45,7 @@
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-dO-uzR">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-dO-uzR">
                     <rect key="frame" x="45" y="163" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,7 +63,7 @@
                         <constraint firstAttribute="height" constant="45" id="OnY-ea-LLa"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="825-kE-A94">
                     <rect key="frame" x="45" y="379" width="324" height="23"/>
@@ -77,15 +77,15 @@
                         <constraint firstAttribute="height" constant="45" id="uVF-Uv-TAv"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IvanIvanov" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
                     <rect key="frame" x="45" y="206" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PWh-05-aqc"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="nickname"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKO-WZ-3q0" customClass="ActualGradientButton" customModule="ItEasy" customModuleProvider="target">
                     <rect key="frame" x="45" y="595" width="324" height="60"/>
@@ -119,7 +119,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="register:" destination="-1" eventType="touchUpInside" id="PWR-nv-5bj"/>
+                        <action selector="register:" destination="-1" eventType="touchUpInside" id="fLZ-fB-Ueb"/>
                     </connections>
                 </button>
             </subviews>

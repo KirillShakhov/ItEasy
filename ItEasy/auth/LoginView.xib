@@ -45,7 +45,7 @@
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-dO-uzR">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-dO-uzR">
                     <rect key="frame" x="45" y="207" width="324" height="23"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     <color key="textColor" white="0.72999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,13 +85,13 @@
                         <action selector="login:" destination="-1" eventType="touchUpInside" id="83X-GK-nFa"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anung Jagatara" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IvanIvanov" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Ai-aOU">
                     <rect key="frame" x="45" y="250" width="324" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="JPc-qC-6ej"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="nickname"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="nickname"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="825-kE-A94">
                     <rect key="frame" x="45" y="315" width="324" height="23"/>
@@ -105,7 +105,7 @@
                         <constraint firstAttribute="height" constant="45" id="fFW-04-X7v"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" secureTextEntry="YES" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                 </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
