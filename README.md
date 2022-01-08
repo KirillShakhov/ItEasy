@@ -3,6 +3,7 @@ Swift Application
 Проект по предмету Low-level programming/Programming languages
 
 Ссылка на видео: [YouTube](https://youtu.be/yc_Dshega1c)
+
 Более качественный ролик будет немного позже
 
 ## Идея
